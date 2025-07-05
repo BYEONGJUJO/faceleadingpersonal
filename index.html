@@ -1,96 +1,2996 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html lang="ko" id="htmlLang">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">🔮 관상으로 보는 성격분석 | AI 얼굴 관상 테스트</title>
+    <meta name="description" content="전통 관상학과 AI가 만나 당신의 성격, 운세, 특징을 정확히 분석해드립니다! 무료 관상 테스트" id="pageDescription">
+    <meta name="keywords" content="관상테스트,얼굴분석,성격테스트,AI관상,무료관상,얼굴관상,운세,성격분석,face reading,personality test,AI physiognomy">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="🔮 관상으로 보는 성격분석 - AI 얼굴 관상 테스트" id="ogTitle">
+    <meta property="og:description" content="전통 관상학과 AI가 만나 당신의 성격과 운세를 정확히 분석해드립니다!" id="ogDescription">
+    <meta property="og:image" content="https://your-domain.com/face-reading-og.jpg">
+    <meta property="og:url" content="https://your-domain.com">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G25HV67JG6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G25HV67JG6');
+    </script>
+
+    <!-- 카카오 SDK -->
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"></script>
+
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="mystical" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:gold;stop-opacity:0.8"/><stop offset="100%" style="stop-color:white;stop-opacity:0"/></radialGradient></defs><circle cx="20" cy="30" r="1.5" fill="url(%23mystical)"/><circle cx="80" cy="20" r="1" fill="url(%23mystical)"/><circle cx="60" cy="70" r="1.2" fill="url(%23mystical)"/><circle cx="30" cy="80" r="0.8" fill="url(%23mystical)"/><circle cx="90" cy="60" r="0.6" fill="url(%23mystical)"/></svg>') repeat;
+            animation: mystical-float 12s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes mystical-float {
+            0%, 100% { opacity: 0.5; transform: translateY(0px) rotate(0deg); }
+            50% { opacity: 0.9; transform: translateY(-30px) rotate(180deg); }
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px;
+            border-radius: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: transparent;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(45deg, #FFD700, #FF6B6B);
+            color: white;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .lang-btn.active:hover {
+            background: linear-gradient(45deg, #FFD700, #FF6B6B);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #FFD700, #FF6B6B, #4ECDC4, #45B7D1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%;
+            animation: mystical-gradient 6s ease-in-out infinite;
+        }
+
+        @keyframes mystical-gradient {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            background: linear-gradient(45deg, #FFE4E1, #E6E6FA);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            color: #666;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        
+        .upload-section {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 2px dashed #FFD700;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+
+        .upload-section:hover {
+            border-color: #FF6B6B;
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .upload-section.dragover {
+            border-color: #FF6B6B !important;
+            background: rgba(255, 215, 0, 0.1) !important;
+            transform: scale(1.02);
+        }
+
+        .input-section {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input, .form-select {
+            padding: 0.8rem;
+            border: 2px solid #FFE4B5;
+            border-radius: 10px;
+            font-size: 1rem;
+            background: white;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: #FFD700;
+        }
+        
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+        
+        .file-input {
+            display: none;
+        }
+        
+        .file-input-button {
+            background: linear-gradient(45deg, #FFD700, #FF6B6B);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .file-input-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+        
+        .preview-container {
+            margin: 1rem 0;
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .preview-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .analyze-button {
+            background: linear-gradient(45deg, #FFD700, #FF6B6B);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            margin-top: 1rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 350px;
+        }
+        
+        .analyze-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+        }
+
+        .analyze-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #FFD700;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .result-section {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            display: none;
+            backdrop-filter: blur(10px);
+        }
+        
+        .face-result {
+            background: linear-gradient(45deg, #FFE4E1, #E6E6FA, #F0F8FF);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid rgba(255,215,0,0.3);
+        }
+
+        .face-result::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
+            animation: mystical-shimmer 8s ease-in-out infinite;
+        }
+        
+        @keyframes mystical-shimmer {
+            0%, 100% { opacity: 0.4; transform: rotate(0deg); }
+            50% { opacity: 0.8; transform: rotate(180deg); }
+        }
+        
+        .face-type {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+            animation: gentle-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes gentle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .face-type-name {
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            margin: 1rem 0;
+            color: #FF6B6B;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .face-description {
+            font-size: 1.1rem;
+            color: #666;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .personality-details {
+            background: linear-gradient(45deg, #FFF8DC, #F0F8FF);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            text-align: left;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+
+        .personality-details h3 {
+            color: #FF6B6B;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .traits-section {
+            background: linear-gradient(45deg, #E1F5FE, #FCE4EC);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+        }
+        
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .trait-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,215,0,0.2);
+        }
+
+        .trait-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .trait-emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .trait-title {
+            font-weight: bold;
+            color: #FF6B6B;
+            margin-bottom: 0.5rem;
+        }
+
+        .trait-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .fortune-score {
+            background: linear-gradient(45deg, #FFD700, #FF6B6B);
+            color: white;
+            padding: 1rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .fortune-prediction {
+            background: linear-gradient(45deg, #DDA0DD, #F0E68C);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1rem 0;
+            border: 1px solid rgba(255,215,0,0.3);
+        }
+        
+        .share-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .share-button {
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .share-button:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .share-button.kakao {
+            background: linear-gradient(45deg, #FEE500, #FFEB3B);
+            color: #3A1D1D;
+        }
+
+        .share-button.kakao:hover {
+            color: #3A1D1D;
+        }
+
+        .share-button.twitter {
+            background: linear-gradient(45deg, #1DA1F2, #0D8BD9);
+        }
+
+        .share-button.facebook {
+            background: linear-gradient(45deg, #1877F2, #42A5F5);
+        }
+
+        .share-button.instagram {
+            background: linear-gradient(45deg, #E4405F, #9B59B6);
+        }
+
+        .share-button.general {
+            background: linear-gradient(45deg, #FFD700, #FF6B6B);
+        }
+
+        #shareCanvas {
+            display: none;
+        }
+        
+        .related-tests {
+            background: rgba(255,255,255,0.95);
+            padding: 1.5rem;
+            border-radius: 20px;
+            margin: 1rem 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .test-card {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .test-card:hover {
+            transform: translateY(-5px);
+            color: white;
+        }
+        
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #FFD700, #FF6B6B);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 1000;
+            animation: mystical-pulse 2s infinite;
+        }
+        
+        @keyframes mystical-pulse {
+            0% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4); }
+            100% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3); }
+        }
+
+        .footer {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 1rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #FF6B6B;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 5px; }
+            .traits-grid { grid-template-columns: 1fr; }
+            .form-grid { grid-template-columns: 1fr; }
+            .language-switcher { 
+                position: relative;
+                top: auto;
+                right: auto;
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 언어 전환 버튼 -->
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('ko')" id="koBtn">한국어</button>
+        <button class="lang-btn" onclick="switchLanguage('en')" id="enBtn">English</button>
+    </div>
+
+    <div class="container">
+        <!-- 헤더 -->
+        <div class="header">
+            <h1 id="mainTitle">🔮 관상으로 보는 성격분석</h1>
+            <p id="mainSubtitle">전통 관상학과 AI가 만나 당신의 성격, 운세, 특징을 정확히 분석해드립니다!</p>
+            <div class="stats">
+                <span class="stat-item" id="stat1">📊 누적 분석 789,234명</span>
+                <span class="stat-item" id="stat2">🎯 정확도 92.7%</span>
+                <span class="stat-item" id="stat3">⭐ 만족도 4.8/5</span>
+            </div>
+        </div>
+        
+        <!-- 업로드 섹션 -->
+        <div class="upload-section" id="uploadSection">
+            <h2 id="uploadTitle">📸 얼굴 사진을 업로드하세요</h2>
+            <p id="uploadDesc">정면을 바라보는 선명한 얼굴 사진으로 더 정확한 분석이 가능해요!</p>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;" id="uploadHint">
+                🔮 클릭하거나 이미지를 드래그해서 업로드하세요
+            </p>
+            
+            <div class="file-input-wrapper">
+                <input type="file" id="imageUpload" class="file-input" accept="image/*,image/jpeg,image/jpg,image/png,image/gif,image/webp">
+                <label for="imageUpload" class="file-input-button" id="fileInputButton">
+                    ✨ 사진 선택하기
+                </label>
+            </div>
+            
+            <div class="preview-container" id="previewContainer" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="미리보기">
+            </div>
+        </div>
+
+        <!-- 개인정보 입력 섹션 -->
+        <div class="input-section">
+            <h2 id="inputTitle">📋 기본 정보를 입력하세요</h2>
+            <p id="inputDesc">더 정확한 관상 분석을 위한 필수 정보들이에요</p>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label" id="genderLabel">성별</label>
+                    <select id="genderSelect" class="form-select">
+                        <option value="" id="genderPlaceholder">성별 선택</option>
+                        <option value="남성" id="genderMale">남성</option>
+                        <option value="여성" id="genderFemale">여성</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" id="ageLabel">연령대</label>
+                    <select id="ageSelect" class="form-select">
+                        <option value="" id="agePlaceholder">연령대 선택</option>
+                        <option value="10대" id="age10s">10대</option>
+                        <option value="20대" id="age20s">20대</option>
+                        <option value="30대" id="age30s">30대</option>
+                        <option value="40대" id="age40s">40대</option>
+                        <option value="50대" id="age50s">50대</option>
+                        <option value="60대 이상" id="age60s">60대 이상</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" id="seasonLabel">태어난 계절</label>
+                    <select id="seasonSelect" class="form-select">
+                        <option value="" id="seasonPlaceholder">계절 선택</option>
+                        <option value="봄" id="seasonSpring">봄 (3~5월)</option>
+                        <option value="여름" id="seasonSummer">여름 (6~8월)</option>
+                        <option value="가을" id="seasonAutumn">가을 (9~11월)</option>
+                        <option value="겨울" id="seasonWinter">겨울 (12~2월)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" id="interestLabel">관심사</label>
+                    <select id="interestSelect" class="form-select">
+                        <option value="" id="interestPlaceholder">관심사 선택</option>
+                        <option value="사업/투자" id="interestBusiness">사업/투자</option>
+                        <option value="연애/결혼" id="interestLove">연애/결혼</option>
+                        <option value="건강/운동" id="interestHealth">건강/운동</option>
+                        <option value="학업/진로" id="interestCareer">학업/진로</option>
+                        <option value="가족/인간관계" id="interestFamily">가족/인간관계</option>
+                        <option value="예술/취미" id="interestArt">예술/취미</option>
+                    </select>
+                </div>
+            </div>
+
+            <button onclick="analyzeFace()" class="analyze-button" id="analyzeBtn" disabled>
+                🔮 관상 분석하기
+            </button>
+        </div>
+        
+        <!-- 로딩 -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <h3 id="loadingTitle">🔮 AI가 당신의 관상을 분석하는 중...</h3>
+            <p id="loadingDesc">전통 관상학과 최신 AI 기술로 정교한 분석을 진행하고 있습니다</p>
+        </div>
+        
+        <!-- 결과 섹션 -->
+        <div class="result-section" id="resultSection">
+            <h2 id="resultTitle">✨ 관상 분석 결과</h2>
+            
+            <div class="face-result">
+                <div class="face-type" id="faceType">👤</div>
+                <div class="face-type-name" id="faceTypeName">지혜로운 학자형</div>
+                <div class="face-description" id="faceDescription">깊은 사고력과 통찰력을 가진 지적인 성격의 소유자입니다.</div>
+            </div>
+
+            <div class="fortune-score" id="fortuneScore">
+                🌟 종합 운세: 85점
+            </div>
+            
+            <div class="personality-details">
+                <h3 id="personalityTitle">🎭 성격 특징</h3>
+                <div id="personalityDetailsText">
+                    <p><strong id="basicPersonality">📖 기본 성격:</strong> <span id="basicPersonalityText">차분하고 사려깊은 성격</span></p>
+                    <p><strong id="strengths">💪 강점:</strong> <span id="strengthsText">분석력과 판단력이 뛰어남</span></p>
+                    <p><strong id="challenges">⚠️ 약점:</strong> <span id="challengesText">때로 너무 신중해서 기회를 놓칠 수 있음</span></p>
+                    <p><strong id="direction">🎯 추천 방향:</strong> <span id="directionText">전문성을 살린 분야에서 성공</span></p>
+                </div>
+            </div>
+            
+            <div class="fortune-prediction">
+                <h3 id="fortuneTitle">🔮 운세 예측</h3>
+                <p id="fortunePredictionText">올해는 새로운 기회가 많이 찾아올 것입니다. 특히 가을경에는 중요한 결정을 내릴 일이 생길 것 같아요. 신중하게 판단하되 너무 망설이지는 마세요!</p>
+            </div>
+            
+            <div class="traits-section">
+                <h3 id="traitsTitle">🌟 세부 특징</h3>
+                <div class="traits-grid" id="traitsGrid">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </div>
+            
+            <div class="share-buttons">
+                <button class="share-button kakao korean-only" onclick="shareToKakao()">💛 카카오톡</button>
+                <button class="share-button twitter" onclick="shareToTwitter()" id="twitterBtn">🐦 Twitter</button>
+                <button class="share-button facebook" onclick="shareToFacebook()" id="facebookBtn">📘 Facebook</button>
+                <button class="share-button instagram" onclick="shareToInstagram()" id="instagramBtn">📷 Instagram</button>
+                <button class="share-button general" onclick="shareGeneral()" id="shareBtn">🔗 링크복사</button>
+            </div>
+
+            <div style="margin-top: 1rem;">
+                <button class="share-button general" onclick="retakeTest()" id="retakeBtn">🔄 다시 분석</button>
+                <button class="share-button general" onclick="saveResult()" id="saveBtn">💾 결과 저장</button>
+            </div>
+        </div>
+        
+        <!-- 연관 테스트 -->
+        <div class="related-tests">
+            <h2 id="relatedTitle">🌟 다른 관상 테스트</h2>
+            <div class="test-grid">
+                <a href="#" class="test-card" target="_blank">
+                    <h3 id="relatedTest1">💰 관상으로 보는 재물운</h3>
+                    <p id="relatedDesc1">당신의 금전운과 사업운을 확인해보세요</p>
+                </a>
+                <a href="#" class="test-card" target="_blank">
+                    <h3 id="relatedTest2">💕 관상으로 보는 연애운</h3>
+                    <p id="relatedDesc2">올해 당신의 연애 운명을 알아보세요</p>
+                </a>
+                <a href="#" class="test-card" target="_blank">
+                    <h3 id="relatedTest3">🏆 관상으로 보는 출세운</h3>
+                    <p id="relatedDesc3">당신의 성공 가능성을 확인해보세요</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="footer">
+            <h3 id="footerTitle">🔮 관상으로 보는 성격분석</h3>
+            <p id="footerSubtitle">전통과 현대가 만나는 신비한 분석! 🌟</p>
+            <div style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
+                <a href="contact.html" id="contactLink">문의하기</a> | 
+                <a href="privacy.html" id="privacyLink">개인정보처리방침</a> | 
+                <a href="terms.html" id="termsLink">이용약관</a>
+            </div>
+            <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;" id="copyright">
+                © 2025 관상으로 보는 성격분석. All rights reserved.
+            </p>
+        </div>
+    </div>
+    
+    <!-- 플로팅 CTA -->
+    <div class="floating-cta" onclick="scrollToUpload()" id="floatingCta">
+        🔮 분석하기
+    </div>
+
+    <!-- 숨겨진 캔버스 (공유 이미지 생성용) -->
+    <canvas id="shareCanvas" width="600" height="800"></canvas>
+
+    <script>
+        // 다국어 번역 데이터
+        const translations = {
+            ko: {
+                pageTitle: '🔮 관상으로 보는 성격분석 | AI 얼굴 관상 테스트',
+                pageDescription: '전통 관상학과 AI가 만나 당신의 성격, 운세, 특징을 정확히 분석해드립니다! 무료 관상 테스트',
+                ogTitle: '🔮 관상으로 보는 성격분석 - AI 얼굴 관상 테스트',
+                ogDescription: '전통 관상학과 AI가 만나 당신의 성격과 운세를 정확히 분석해드립니다!',
+                mainTitle: '🔮 관상으로 보는 성격분석',
+                mainSubtitle: '전통 관상학과 AI가 만나 당신의 성격, 운세, 특징을 정확히 분석해드립니다!',
+                stat1: '📊 누적 분석 789,234명',
+                stat2: '🎯 정확도 92.7%',
+                stat3: '⭐ 만족도 4.8/5',
+                uploadTitle: '📸 얼굴 사진을 업로드하세요',
+                uploadDesc: '정면을 바라보는 선명한 얼굴 사진으로 더 정확한 분석이 가능해요!',
+                uploadHint: '🔮 클릭하거나 이미지를 드래그해서 업로드하세요',
+                fileInputButton: '✨ 사진 선택하기',
+                inputTitle: '📋 기본 정보를 입력하세요',
+                inputDesc: '더 정확한 관상 분석을 위한 필수 정보들이에요',
+                genderLabel: '성별',
+                genderPlaceholder: '성별 선택',
+                genderMale: '남성',
+                genderFemale: '여성',
+                ageLabel: '연령대',
+                agePlaceholder: '연령대 선택',
+                age10s: '10대',
+                age20s: '20대',
+                age30s: '30대',
+                age40s: '40대',
+                age50s: '50대',
+                age60s: '60대 이상',
+                seasonLabel: '태어난 계절',
+                seasonPlaceholder: '계절 선택',
+                seasonSpring: '봄 (3~5월)',
+                seasonSummer: '여름 (6~8월)',
+                seasonAutumn: '가을 (9~11월)',
+                seasonWinter: '겨울 (12~2월)',
+                interestLabel: '관심사',
+                interestPlaceholder: '관심사 선택',
+                interestBusiness: '사업/투자',
+                interestLove: '연애/결혼',
+                interestHealth: '건강/운동',
+                interestCareer: '학업/진로',
+                interestFamily: '가족/인간관계',
+                interestArt: '예술/취미',
+                analyzeBtn: '🔮 관상 분석하기',
+                loadingTitle: '🔮 AI가 당신의 관상을 분석하는 중...',
+                loadingDesc: '전통 관상학과 최신 AI 기술로 정교한 분석을 진행하고 있습니다',
+                resultTitle: '✨ 관상 분석 결과',
+                personalityTitle: '🎭 성격 특징',
+                basicPersonality: '📖 기본 성격:',
+                strengths: '💪 강점:',
+                challenges: '⚠️ 약점:',
+                direction: '🎯 추천 방향:',
+                fortuneTitle: '🔮 운세 예측',
+                traitsTitle: '🌟 세부 특징',
+                twitterBtn: '🐦 Twitter',
+                facebookBtn: '📘 Facebook',
+                instagramBtn: '📷 Instagram',
+                shareBtn: '🔗 링크복사',
+                retakeBtn: '🔄 다시 분석',
+                saveBtn: '💾 결과 저장',
+                relatedTitle: '🌟 다른 관상 테스트',
+                relatedTest1: '💰 관상으로 보는 재물운',
+                relatedDesc1: '당신의 금전운과 사업운을 확인해보세요',
+                relatedTest2: '💕 관상으로 보는 연애운',
+                relatedDesc2: '올해 당신의 연애 운명을 알아보세요',
+                relatedTest3: '🏆 관상으로 보는 출세운',
+                relatedDesc3: '당신의 성공 가능성을 확인해보세요',
+                footerTitle: '🔮 관상으로 보는 성격분석',
+                footerSubtitle: '전통과 현대가 만나는 신비한 분석! 🌟',
+                contactLink: '문의하기',
+                privacyLink: '개인정보처리방침',
+                termsLink: '이용약관',
+                copyright: '© 2025 관상으로 보는 성격분석. All rights reserved.',
+                floatingCta: '🔮 분석하기'
+            },
+            en: {
+                pageTitle: '🔮 AI Face Reading Personality Test | Discover Your Character',
+                pageDescription: 'Traditional physiognomy meets AI! Analyze your personality, fortune, and traits with our advanced face reading technology.',
+                ogTitle: '🔮 AI Face Reading Personality Test - Discover Your Character',
+                ogDescription: 'Traditional physiognomy meets AI to analyze your personality and fortune with amazing accuracy!',
+                mainTitle: '🔮 AI Face Reading Personality Test',
+                mainSubtitle: 'Traditional physiognomy meets AI to analyze your personality, fortune, and unique traits with amazing accuracy!',
+                stat1: '📊 789,234 Analyses Complete',
+                stat2: '🎯 92.7% Accuracy',
+                stat3: '⭐ 4.8/5 Rating',
+                uploadTitle: '📸 Upload Your Photo',
+                uploadDesc: 'Please upload a clear, front-facing photo for the most accurate analysis!',
+                uploadHint: '🔮 Click or drag an image here to upload',
+                fileInputButton: '✨ Choose Photo',
+                inputTitle: '📋 Enter Your Details',
+                inputDesc: 'Please provide some basic information for more accurate face reading analysis',
+                genderLabel: 'Gender',
+                genderPlaceholder: 'Select Gender',
+                genderMale: 'Male',
+                genderFemale: 'Female',
+                ageLabel: 'Age Group',
+                agePlaceholder: 'Select Age Group',
+                age10s: 'Teens (13-19)',
+                age20s: 'Twenties (20-29)',
+                age30s: 'Thirties (30-39)',
+                age40s: 'Forties (40-49)',
+                age50s: 'Fifties (50-59)',
+                age60s: 'Sixties+ (60+)',
+                seasonLabel: 'Birth Season',
+                seasonPlaceholder: 'Select Season',
+                seasonSpring: 'Spring (Mar-May)',
+                seasonSummer: 'Summer (Jun-Aug)',
+                seasonAutumn: 'Autumn (Sep-Nov)',
+                seasonWinter: 'Winter (Dec-Feb)',
+                interestLabel: 'Main Interest',
+                interestPlaceholder: 'Select Interest',
+                interestBusiness: 'Business & Finance',
+                interestLove: 'Love & Relationships',
+                interestHealth: 'Health & Wellness',
+                interestCareer: 'Career & Education',
+                interestFamily: 'Family & Friends',
+                interestArt: 'Arts & Creativity',
+                analyzeBtn: '🔮 Analyze My Face',
+                loadingTitle: '🔮 AI is analyzing your face...',
+                loadingDesc: 'Combining traditional physiognomy with advanced AI technology for precise analysis',
+                resultTitle: '✨ Face Reading Results',
+                personalityTitle: '🎭 Personality Traits',
+                basicPersonality: '📖 Basic Personality:',
+                strengths: '💪 Strengths:',
+                challenges: '⚠️ Challenges:',
+                direction: '🎯 Recommended Path:',
+                fortuneTitle: '🔮 Fortune Prediction',
+                traitsTitle: '🌟 Key Characteristics',
+                twitterBtn: '🐦 Twitter',
+                facebookBtn: '📘 Facebook',
+                instagramBtn: '📷 Instagram',
+                shareBtn: '🔗 Copy Link',
+                retakeBtn: '🔄 Analyze Again',
+                saveBtn: '💾 Save Result',
+                relatedTitle: '🌟 More Face Reading Tests',
+                relatedTest1: '💰 Wealth & Success Reading',
+                relatedDesc1: 'Discover your potential for financial success and prosperity',
+                relatedTest2: '💕 Love & Romance Reading',
+                relatedDesc2: 'Learn about your romantic destiny and relationship patterns',
+                relatedTest3: '🏆 Career & Achievement Reading',
+                relatedDesc3: 'Explore your professional potential and career path',
+                footerTitle: '🔮 AI Face Reading Personality Test',
+                footerSubtitle: 'Where ancient wisdom meets modern technology! 🌟',
+                contactLink: 'Contact Us',
+                privacyLink: 'Privacy Policy',
+                termsLink: 'Terms of Service',
+                copyright: '© 2025 AI Face Reading Personality Test. All rights reserved.',
+                floatingCta: '🔮 Try Now'
+            }
+        };
+
+        // 현재 언어 상태 (기본값: 한국어)
+        let currentLanguage = 'ko';
+
+        // 관상 분석 데이터 (다국어 지원)
+        const faceReadingData = {
+            ko: [
+                {
+                    type: "👑",
+                    name: "제왕형",
+                    description: "타고난 리더십과 카리스마를 가진 지도자 타입입니다. 강한 의지력과 결단력으로 어려운 상황도 헤쳐나가는 능력이 있어요.",
+                    personality: {
+                        basic: "당당하고 자신감 넘치는 성격",
+                        strength: "리더십과 결단력이 뛰어남",
+                        weakness: "때로 독선적이거나 고집스러울 수 있음",
+                        direction: "관리직이나 사업 분야에서 성공 가능성 높음"
+                    },
+                    fortunePrediction: "올해는 새로운 프로젝트나 사업 기회가 많이 찾아올 것입니다. 특히 하반기에는 중요한 결정을 내릴 일이 생길 거예요. 주변 사람들의 조언을 잘 들으면서 신중하게 판단하세요!",
+                    traits: [
+                        {emoji: "👑", title: "리더십", text: "타고난 지도자의 기질"},
+                        {emoji: "💪", title: "강인함", text: "어려움을 극복하는 의지력"},
+                        {emoji: "🎯", title: "목표지향", text: "명확한 목표와 추진력"},
+                        {emoji: "⚡", title: "결단력", text: "빠른 판단과 실행력"}
+                    ],
+                    fortuneScore: 92
+                },
+                {
+                    type: "🧠",
+                    name: "지혜로운 학자형",
+                    description: "깊은 사고력과 통찰력을 가진 지적인 성격의 소유자입니다. 학문이나 연구 분야에서 뛰어난 능력을 발휘할 수 있어요.",
+                    personality: {
+                        basic: "차분하고 사려깊은 성격",
+                        strength: "분석력과 판단력이 뛰어남",
+                        weakness: "때로 너무 신중해서 기회를 놓칠 수 있음",
+                        direction: "전문성을 살린 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 새로운 지식을 습득하거나 전문성을 키울 기회가 많아질 것입니다. 특히 가을경에는 중요한 깨달음을 얻을 수 있을 거예요. 꾸준한 학습과 연구로 큰 성과를 얻으세요!",
+                    traits: [
+                        {emoji: "📚", title: "지적 호기심", text: "끊임없는 학습 욕구"},
+                        {emoji: "🔍", title: "분석력", text: "깊이 있는 사고와 분석"},
+                        {emoji: "💡", title: "통찰력", text: "본질을 꿰뚫는 안목"},
+                        {emoji: "🤔", title: "신중함", text: "신중하고 체계적인 접근"}
+                    ],
+                    fortuneScore: 85
+                },
+                {
+                    type: "🌟",
+                    name: "사교적 인기형",
+                    description: "밝고 활발한 성격으로 사람들에게 인기가 많은 타입입니다. 뛰어난 소통 능력과 친화력으로 어디서든 환영받아요.",
+                    personality: {
+                        basic: "밝고 외향적인 성격",
+                        strength: "소통 능력과 친화력이 뛰어남",
+                        weakness: "때로 깊이 있는 사고보다 겉모습에 치중할 수 있음",
+                        direction: "서비스업이나 영업 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 인맥을 통한 좋은 기회들이 많이 찾아올 것입니다. 특히 여름철에는 새로운 사람들과의 만남이 인생을 바꿀 수 있어요. 적극적인 소통으로 더 큰 성과를 거두세요!",
+                    traits: [
+                        {emoji: "😊", title: "친화력", text: "사람들과 쉽게 친해지는 능력"},
+                        {emoji: "💬", title: "소통력", text: "뛰어난 대화 능력"},
+                        {emoji: "🎉", title: "활발함", text: "에너지 넘치는 성격"},
+                        {emoji: "🤝", title: "네트워킹", text: "폭넓은 인맥 관리 능력"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🛡️",
+                    name: "든든한 수호자형",
+                    description: "책임감이 강하고 신뢰할 수 있는 성격의 소유자입니다. 가족이나 친구들을 위해 헌신하는 따뜻한 마음을 가지고 있어요.",
+                    personality: {
+                        basic: "책임감 강하고 신뢰할 수 있는 성격",
+                        strength: "헌신적이고 든든한 지원자 역할",
+                        weakness: "자신보다 남을 우선시해 스트레스 받을 수 있음",
+                        direction: "교육이나 상담 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 가족이나 친구들로부터 큰 고마움을 받을 일이 생길 것입니다. 특히 봄철에는 당신의 도움이 필요한 사람이 나타날 거예요. 선한 마음으로 도움을 주면 복이 돌아올 것입니다!",
+                    traits: [
+                        {emoji: "❤️", title: "헌신성", text: "타인을 위한 희생 정신"},
+                        {emoji: "🤗", title: "포용력", text: "모든 것을 받아들이는 마음"},
+                        {emoji: "💪", title: "책임감", text: "맡은 일은 끝까지 해내는 성격"},
+                        {emoji: "🏠", title: "가정적", text: "가족과 집을 소중히 여김"}
+                    ],
+                    fortuneScore: 90
+                },
+                {
+                    type: "🎨",
+                    name: "창의적 예술가형",
+                    description: "독특한 감성과 창의력을 가진 예술가 타입입니다. 남들과 다른 시각으로 세상을 바라보며 새로운 것을 만들어내는 능력이 있어요.",
+                    personality: {
+                        basic: "감성적이고 창의적인 성격",
+                        strength: "독창적인 아이디어와 예술적 감각",
+                        weakness: "현실적인 문제에 약할 수 있음",
+                        direction: "예술이나 창작 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 창의적 재능이 빛을 발할 기회가 많아질 것입니다. 특히 겨울철에는 예상치 못한 영감을 얻을 수 있어요. 자신만의 스타일을 유지하며 꾸준히 창작 활동을 해보세요!",
+                    traits: [
+                        {emoji: "🎭", title: "예술적 감각", text: "타고난 미적 감각"},
+                        {emoji: "💭", title: "상상력", text: "풍부한 상상력과 창의력"},
+                        {emoji: "🌈", title: "독창성", text: "남들과 다른 독특한 시각"},
+                        {emoji: "✨", title: "영감", text: "순간의 영감을 포착하는 능력"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "⚖️",
+                    name: "공정한 판관형",
+                    description: "정의감이 강하고 공정한 판단력을 가진 타입입니다. 옳고 그름을 분명히 하며 균형잡힌 시각으로 문제를 해결해요.",
+                    personality: {
+                        basic: "정의롭고 공정한 성격",
+                        strength: "균형잡힌 판단력과 도덕성",
+                        weakness: "때로 너무 엄격해서 융통성이 부족할 수 있음",
+                        direction: "법조계나 공직 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 중요한 결정을 내려야 할 상황들이 많이 생길 것입니다. 특히 여름철에는 당신의 공정한 판단이 많은 사람들에게 도움이 될 거예요. 원칙을 지키되 상황에 따른 융통성도 발휘해보세요!",
+                    traits: [
+                        {emoji: "⚖️", title: "공정성", text: "공평하고 객관적인 판단"},
+                        {emoji: "🔍", title: "분석력", text: "상황을 정확히 파악하는 능력"},
+                        {emoji: "💯", title: "원칙주의", text: "옳고 그름을 분명히 함"},
+                        {emoji: "🎯", title: "정확성", text: "정확하고 신중한 판단"}
+                    ],
+                    fortuneScore: 89
+                },
+                {
+                    type: "🌱",
+                    name: "순수한 자연형",
+                    description: "순수하고 자연스러운 마음을 가진 타입입니다. 꾸밈없는 진실한 성격으로 사람들에게 편안함을 주는 존재예요.",
+                    personality: {
+                        basic: "순수하고 자연스러운 성격",
+                        strength: "진실성과 순수함이 매력",
+                        weakness: "세상의 복잡함에 상처받기 쉬움",
+                        direction: "자연 관련 분야나 힐링 사업에서 성공"
+                    },
+                    fortunePrediction: "올해는 자연과 함께하는 시간이 많아질 것입니다. 특히 봄철에는 새로운 시작을 알리는 좋은 소식이 있을 거예요. 순수한 마음을 잃지 말고 자연스럽게 살아가세요!",
+                    traits: [
+                        {emoji: "🌿", title: "자연친화", text: "자연을 사랑하는 마음"},
+                        {emoji: "💚", title: "순수함", text: "꾸밈없는 진실한 성격"},
+                        {emoji: "🕊️", title: "평화로움", text: "마음의 평화를 추구"},
+                        {emoji: "🌸", title: "치유력", text: "타인을 위로하는 능력"}
+                    ],
+                    fortuneScore: 84
+                },
+                {
+                    type: "🔥",
+                    name: "열정적 도전자형",
+                    description: "뜨거운 열정과 도전 정신을 가진 타입입니다. 새로운 것에 대한 도전을 두려워하지 않고 적극적으로 삶을 개척해나가요.",
+                    personality: {
+                        basic: "열정적이고 도전적인 성격",
+                        strength: "강한 추진력과 도전 정신",
+                        weakness: "때로 성급해서 실수할 수 있음",
+                        direction: "스포츠나 모험 관련 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 새로운 도전의 기회가 많이 찾아올 것입니다. 특히 가을철에는 큰 변화의 시기가 될 거예요. 두려워하지 말고 당신의 열정을 믿고 도전해보세요!",
+                    traits: [
+                        {emoji: "🔥", title: "열정", text: "뜨거운 열정과 에너지"},
+                        {emoji: "🚀", title: "도전정신", text: "새로운 것에 대한 도전"},
+                        {emoji: "⚡", title: "추진력", text: "강력한 실행력"},
+                        {emoji: "🏆", title: "승부욕", text: "이기려는 강한 의지"}
+                    ],
+                    fortuneScore: 91
+                },
+                {
+                    type: "🧘",
+                    name: "평온한 현자형",
+                    description: "마음의 평화와 내면의 안정을 추구하는 타입입니다. 깊은 성찰과 명상을 통해 지혜를 얻고 타인에게 조언을 주는 능력이 있어요.",
+                    personality: {
+                        basic: "평온하고 성찰적인 성격",
+                        strength: "깊은 내면의 지혜와 평정심",
+                        weakness: "때로 세속적인 욕구에 소홀할 수 있음",
+                        direction: "상담이나 종교 관련 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 내면의 성장과 깨달음의 시기가 될 것입니다. 특히 겨울철에는 중요한 깨달음을 얻을 수 있어요. 명상이나 성찰의 시간을 가지며 내면의 평화를 찾아보세요!",
+                    traits: [
+                        {emoji: "🧘", title: "평정심", text: "흔들리지 않는 마음"},
+                        {emoji: "🌅", title: "성찰력", text: "깊은 내면의 성찰"},
+                        {emoji: "☯️", title: "균형감", text: "조화와 균형을 추구"},
+                        {emoji: "💫", title: "지혜", text: "깊은 통찰력과 지혜"}
+                    ],
+                    fortuneScore: 86
+                },
+                {
+                    type: "💰",
+                    name: "재물운 풍부형",
+                    description: "타고난 재물운과 사업 감각을 가진 타입입니다. 돈을 벌고 관리하는 능력이 뛰어나며 경제적 성공을 이룰 가능성이 높아요.",
+                    personality: {
+                        basic: "현실적이고 경제관념이 뛰어난 성격",
+                        strength: "뛰어난 사업 감각과 재정 관리 능력",
+                        weakness: "때로 물질적 가치에만 치중할 수 있음",
+                        direction: "사업이나 투자 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 재물운이 매우 좋은 해가 될 것입니다. 특히 여름철에는 큰 수익을 얻을 기회가 생길 거예요. 신중한 투자와 계획적인 재정 관리로 큰 성과를 거두세요!",
+                    traits: [
+                        {emoji: "💰", title: "재물운", text: "타고난 돈 버는 능력"},
+                        {emoji: "📈", title: "투자감각", text: "뛰어난 투자 판단력"},
+                        {emoji: "🏦", title: "경제관념", text: "현실적인 경제 감각"},
+                        {emoji: "💎", title: "가치판단", text: "가치있는 것을 알아보는 눈"}
+                    ],
+                    fortuneScore: 94
+                },
+                {
+                    type: "❤️",
+                    name: "사랑스러운 매력형",
+                    description: "타고난 매력과 사랑스러운 성격을 가진 타입입니다. 사람들을 끌어당기는 특별한 매력이 있어 연애운도 매우 좋아요.",
+                    personality: {
+                        basic: "사랑스럽고 매력적인 성격",
+                        strength: "뛰어난 매력과 사교성",
+                        weakness: "때로 감정적이고 변덕스러울 수 있음",
+                        direction: "연예계나 서비스업에서 성공"
+                    },
+                    fortunePrediction: "올해는 연애운이 매우 좋은 해가 될 것입니다. 특히 봄철에는 운명적인 만남이 있을 수 있어요. 당신의 매력을 자신있게 발산하며 좋은 인연을 만들어보세요!",
+                    traits: [
+                        {emoji: "💕", title: "매력", text: "타고난 매력과 끌림"},
+                        {emoji: "😍", title: "사랑받음", text: "사람들의 사랑을 받는 능력"},
+                        {emoji: "🌺", title: "우아함", text: "우아하고 세련된 매력"},
+                        {emoji: "💖", title: "감성", text: "풍부한 감성과 표현력"}
+                    ],
+                    fortuneScore: 93
+                },
+                {
+                    type: "🏃",
+                    name: "활발한 운동형",
+                    description: "건강하고 활발한 에너지를 가진 타입입니다. 체력이 좋고 운동을 좋아하며 건강한 라이프스타일을 추구해요.",
+                    personality: {
+                        basic: "건강하고 활발한 성격",
+                        strength: "뛰어난 체력과 건강 관리 능력",
+                        weakness: "때로 너무 활발해서 주변이 지칠 수 있음",
+                        direction: "스포츠나 헬스케어 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 건강운이 매우 좋은 해가 될 것입니다. 특히 여름철에는 새로운 운동이나 활동을 시작하기 좋은 시기예요. 꾸준한 운동으로 더욱 건강하고 활기찬 삶을 만들어보세요!",
+                    traits: [
+                        {emoji: "💪", title: "체력", text: "뛰어난 체력과 건강"},
+                        {emoji: "🏃", title: "활동성", text: "활발하고 역동적인 성격"},
+                        {emoji: "🌟", title: "에너지", text: "넘치는 에너지와 활력"},
+                        {emoji: "🏆", title: "도전", text: "새로운 도전을 즐기는 성격"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🎭",
+                    name: "연기자형",
+                    description: "다양한 모습을 연출할 수 있는 연기력을 가진 타입입니다. 상황에 따라 적절히 대처하며 사람들을 즐겁게 해주는 능력이 있어요.",
+                    personality: {
+                        basic: "다재다능하고 표현력이 풍부한 성격",
+                        strength: "뛰어난 연기력과 적응력",
+                        weakness: "때로 진짜 자신을 잃을 수 있음",
+                        direction: "연예계나 공연 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 재능이 많은 사람들에게 인정받을 기회가 생길 것입니다. 특히 가을철에는 무대에 설 기회가 있을 거예요. 자신의 재능을 믿고 당당하게 표현해보세요!",
+                    traits: [
+                        {emoji: "🎭", title: "연기력", text: "뛰어난 연기와 표현 능력"},
+                        {emoji: "🎪", title: "엔터테인먼트", text: "사람들을 즐겁게 하는 재능"},
+                        {emoji: "🎨", title: "창의성", text: "창의적인 표현과 아이디어"},
+                        {emoji: "✨", title: "매력", text: "무대 위의 특별한 매력"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "🌊",
+                    name: "물의 지혜형",
+                    description: "물처럼 유연하고 적응력이 뛰어난 타입입니다. 상황에 따라 자유자재로 변화하며 어려운 상황도 지혜롭게 헤쳐나가요.",
+                    personality: {
+                        basic: "유연하고 적응력이 뛰어난 성격",
+                        strength: "뛰어난 적응력과 유연성",
+                        weakness: "때로 일관성이 부족할 수 있음",
+                        direction: "컨설팅이나 중재 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 변화의 시기가 될 것입니다. 특히 여름철에는 큰 변화의 기회가 찾아올 거예요. 변화를 두려워하지 말고 물처럼 유연하게 적응해보세요!",
+                    traits: [
+                        {emoji: "🌊", title: "유연성", text: "상황에 맞는 유연한 대처"},
+                        {emoji: "🧘", title: "적응력", text: "어떤 환경에도 적응"},
+                        {emoji: "💧", title: "순응성", text: "자연스러운 변화 수용"},
+                        {emoji: "🌀", title: "변화", text: "변화를 통한 성장"}
+                    ],
+                    fortuneScore: 85
+                },
+                {
+                    type: "🌸",
+                    name: "봄의 희망형",
+                    description: "희망과 긍정적인 에너지를 가진 타입입니다. 어려운 상황에서도 희망을 잃지 않고 주변 사람들에게 용기를 주는 존재예요.",
+                    personality: {
+                        basic: "희망적이고 긍정적인 성격",
+                        strength: "불굴의 희망과 긍정적 에너지",
+                        weakness: "때로 현실을 직시하지 못할 수 있음",
+                        direction: "교육이나 상담 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 새로운 희망의 씨앗을 심는 해가 될 것입니다. 특히 봄철에는 오래 기다렸던 좋은 소식이 있을 거예요. 희망을 잃지 말고 긍정적인 마음으로 살아가세요!",
+                    traits: [
+                        {emoji: "🌸", title: "희망", text: "언제나 희망적인 마음"},
+                        {emoji: "☀️", title: "긍정성", text: "긍정적인 에너지"},
+                        {emoji: "🌱", title: "성장", text: "끊임없는 성장 의지"},
+                        {emoji: "💖", title: "격려", text: "타인을 격려하는 능력"}
+                    ],
+                    fortuneScore: 89
+                },
+                {
+                    type: "🦅",
+                    name: "날카로운 독수리형",
+                    description: "예리한 직감과 통찰력을 가진 타입입니다. 멀리 내다보는 안목이 있고 핵심을 파악하는 능력이 뛰어나요.",
+                    personality: {
+                        basic: "예리하고 통찰력이 뛰어난 성격",
+                        strength: "뛰어난 직감과 분석력",
+                        weakness: "때로 너무 날카로워서 상처를 줄 수 있음",
+                        direction: "분석이나 연구 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 직감이 큰 도움이 될 것입니다. 특히 겨울철에는 중요한 통찰을 얻을 수 있어요. 직감을 믿되 감정적으로 표현하지 않도록 주의하세요!",
+                    traits: [
+                        {emoji: "🦅", title: "예리함", text: "날카로운 직감과 통찰"},
+                        {emoji: "🔍", title: "분석력", text: "깊이 있는 분석 능력"},
+                        {emoji: "🎯", title: "정확성", text: "정확한 판단과 예측"},
+                        {emoji: "👁️", title: "통찰", text: "본질을 꿰뚫는 안목"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🌙",
+                    name: "신비로운 달형",
+                    description: "신비롭고 직감적인 능력을 가진 타입입니다. 감수성이 풍부하고 영적인 면에 관심이 많아 특별한 능력을 발휘할 수 있어요.",
+                    personality: {
+                        basic: "신비롭고 감수성이 풍부한 성격",
+                        strength: "뛰어난 직감과 영적 감수성",
+                        weakness: "때로 현실과 동떨어질 수 있음",
+                        direction: "예술이나 영적 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 신비로운 경험이나 깨달음을 얻을 기회가 많아질 것입니다. 특히 보름달이 뜨는 밤에는 특별한 영감을 받을 수 있어요. 내면의 목소리에 귀를 기울이며 직감을 따라가보세요!",
+                    traits: [
+                        {emoji: "🌙", title: "신비로움", text: "신비롭고 몽환적인 매력"},
+                        {emoji: "🔮", title: "직감", text: "뛰어난 직감과 예감"},
+                        {emoji: "✨", title: "영성", text: "영적인 감수성과 깨달음"},
+                        {emoji: "🎨", title: "예술성", text: "예술적 감각과 창의력"}
+                    ],
+                    fortuneScore: 86
+                },
+                {
+                    type: "🌟",
+                    name: "밝은 태양형",
+                    description: "밝고 따뜻한 에너지로 주변을 밝게 만드는 타입입니다. 긍정적인 마음으로 사람들에게 희망과 용기를 주는 존재예요.",
+                    personality: {
+                        basic: "밝고 따뜻한 성격",
+                        strength: "긍정적 에너지와 리더십",
+                        weakness: "때로 너무 밝아서 피곤할 수 있음",
+                        direction: "교육이나 엔터테인먼트 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 밝은 에너지가 많은 사람들에게 도움이 될 것입니다. 특히 여름철에는 리더 역할을 맡을 기회가 생길 거예요. 긍정적인 마음을 유지하며 주변을 밝게 만들어보세요!",
+                    traits: [
+                        {emoji: "☀️", title: "밝음", text: "밝고 따뜻한 에너지"},
+                        {emoji: "😊", title: "긍정성", text: "항상 긍정적인 마음"},
+                        {emoji: "🌻", title: "활력", text: "넘치는 활력과 생명력"},
+                        {emoji: "💛", title: "따뜻함", text: "사람들을 따뜻하게 품는 마음"}
+                    ],
+                    fortuneScore: 92
+                },
+                {
+                    type: "🏔️",
+                    name: "든든한 산형",
+                    description: "산처럼 든든하고 안정적인 성격을 가진 타입입니다. 흔들리지 않는 의지력으로 어려운 상황도 묵묵히 견뎌내는 능력이 있어요.",
+                    personality: {
+                        basic: "든든하고 안정적인 성격",
+                        strength: "강한 의지력과 인내심",
+                        weakness: "때로 고집스럽고 변화에 둔감할 수 있음",
+                        direction: "건설이나 제조업 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 오랜 노력의 결실을 맺는 해가 될 것입니다. 특히 가을철에는 큰 성과를 거둘 수 있어요. 꾸준함과 인내심으로 목표를 달성해보세요!",
+                    traits: [
+                        {emoji: "🏔️", title: "안정성", text: "흔들리지 않는 든든함"},
+                        {emoji: "💪", title: "의지력", text: "강인한 정신력"},
+                        {emoji: "🛡️", title: "보호", text: "타인을 보호하는 능력"},
+                        {emoji: "⏰", title: "인내", text: "끝까지 견디는 인내심"}
+                    ],
+                    fortuneScore: 90
+                },
+                {
+                    type: "🦋",
+                    name: "변화의 나비형",
+                    description: "아름다운 변화와 성장을 거듭하는 타입입니다. 끊임없이 발전하며 자신만의 아름다운 색깔을 만들어가는 능력이 있어요.",
+                    personality: {
+                        basic: "변화를 즐기고 성장하는 성격",
+                        strength: "뛰어난 적응력과 성장 능력",
+                        weakness: "때로 변화가 너무 잦아 불안할 수 있음",
+                        direction: "패션이나 뷰티 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 큰 변화와 성장의 시기가 될 것입니다. 특히 봄철에는 완전히 새로운 모습으로 거듭날 수 있어요. 변화를 두려워하지 말고 아름다운 변신을 해보세요!",
+                    traits: [
+                        {emoji: "🦋", title: "변화", text: "아름다운 변화와 성장"},
+                        {emoji: "🌈", title: "다양성", text: "다양한 색깔의 매력"},
+                        {emoji: "✨", title: "아름다움", text: "자연스러운 아름다움"},
+                        {emoji: "🌸", title: "성장", text: "끊임없는 성장과 발전"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "🐅",
+                    name: "용맹한 호랑이형",
+                    description: "용맹하고 당당한 기세를 가진 타입입니다. 강한 카리스마와 결단력으로 어려운 상황도 당당히 맞서는 능력이 있어요.",
+                    personality: {
+                        basic: "용맹하고 당당한 성격",
+                        strength: "강한 카리스마와 리더십",
+                        weakness: "때로 너무 강해서 위압적일 수 있음",
+                        direction: "경영이나 군사 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 큰 도전과 기회가 함께 찾아올 것입니다. 특히 겨울철에는 용기를 내야 할 상황이 생길 거예요. 당신의 용맹함을 믿고 당당히 맞서보세요!",
+                    traits: [
+                        {emoji: "🐅", title: "용맹", text: "두려움 없는 용맹함"},
+                        {emoji: "👑", title: "카리스마", text: "강한 카리스마와 위엄"},
+                        {emoji: "⚔️", title: "결단력", text: "빠르고 정확한 결단"},
+                        {emoji: "🔥", title: "열정", text: "뜨거운 열정과 의지"}
+                    ],
+                    fortuneScore: 93
+                },
+                {
+                    type: "🕊️",
+                    name: "평화로운 비둘기형",
+                    description: "평화롭고 온화한 성격을 가진 타입입니다. 갈등을 조화롭게 해결하고 모든 사람과 화목하게 지내는 능력이 있어요.",
+                    personality: {
+                        basic: "평화롭고 온화한 성격",
+                        strength: "뛰어난 조화 능력과 평화로움",
+                        weakness: "때로 갈등을 피하려다 문제가 커질 수 있음",
+                        direction: "외교나 중재 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 화합과 조화의 해가 될 것입니다. 특히 봄철에는 오래된 갈등이 해결될 수 있어요. 평화로운 마음으로 모든 사람과 좋은 관계를 만들어보세요!",
+                    traits: [
+                        {emoji: "🕊️", title: "평화", text: "평화롭고 조화로운 마음"},
+                        {emoji: "🤝", title: "화합", text: "사람들을 화합시키는 능력"},
+                        {emoji: "💙", title: "온화함", text: "온화하고 부드러운 성격"},
+                        {emoji: "🌿", title: "치유", text: "마음을 치유하는 능력"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🌊",
+                    name: "지혜로운 바다형",
+                    description: "바다처럼 깊고 넓은 마음을 가진 타입입니다. 모든 것을 포용하는 너그러운 마음과 깊은 지혜를 가지고 있어요.",
+                    personality: {
+                        basic: "깊고 넓은 마음을 가진 성격",
+                        strength: "포용력과 깊은 지혜",
+                        weakness: "때로 너무 깊어서 이해받기 어려울 수 있음",
+                        direction: "철학이나 종교 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 깊은 깨달음과 지혜를 얻는 해가 될 것입니다. 특히 여름철에는 인생의 중요한 진리를 발견할 수 있어요. 바다처럼 넓은 마음으로 모든 것을 포용해보세요!",
+                    traits: [
+                        {emoji: "🌊", title: "포용력", text: "모든 것을 받아들이는 마음"},
+                        {emoji: "🧠", title: "지혜", text: "깊은 지혜와 통찰력"},
+                        {emoji: "💙", title: "평온", text: "평온하고 고요한 마음"},
+                        {emoji: "🔄", title: "순환", text: "생명의 순환을 이해"}
+                    ],
+                    fortuneScore: 91
+                },
+                {
+                    type: "🌸",
+                    name: "순수한 꽃잎형",
+                    description: "순수하고 아름다운 마음을 가진 꽃잎처럼 여린 성격입니다. 사람들에게 평안함과 아름다움을 선사하는 특별한 능력이 있어요.",
+                    personality: {
+                        basic: "순수하고 여린 감성의 성격",
+                        strength: "아름다운 마음과 힐링 능력",
+                        weakness: "상처받기 쉽고 민감할 수 있음",
+                        direction: "미용이나 힐링 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 아름다운 만남들이 많이 생길 것입니다. 특히 꽃이 피는 계절에는 새로운 사랑이나 우정이 시작될 수 있어요. 순수한 마음을 유지하며 사람들과 진실한 관계를 맺어보세요!",
+                    traits: [
+                        {emoji: "🌸", title: "순수함", text: "때묻지 않은 순수한 마음"},
+                        {emoji: "💖", title: "사랑스러움", text: "사람들을 사랑스럽게 만드는 매력"},
+                        {emoji: "🌺", title: "아름다움", text: "내면의 아름다움이 빛남"},
+                        {emoji: "🦋", title: "섬세함", text: "세심하고 섬세한 감성"}
+                    ],
+                    fortuneScore: 86
+                },
+                {
+                    type: "🌋",
+                    name: "폭발적 화산형",
+                    description: "내재된 강력한 에너지를 가진 화산같은 성격입니다. 평소엔 조용하지만 필요할 때 엄청난 힘을 발휘하는 잠재력이 있어요.",
+                    personality: {
+                        basic: "조용하지만 강력한 내면을 가진 성격",
+                        strength: "폭발적인 잠재력과 집중력",
+                        weakness: "감정 기복이 심할 수 있음",
+                        direction: "예술이나 창작 분야에서 큰 성공"
+                    },
+                    fortunePrediction: "올해는 오랫동안 준비해온 일이 폭발적으로 성과를 내는 해가 될 것입니다. 특히 가을철에는 당신의 진짜 실력이 드러날 거예요. 내면의 에너지를 믿고 꾸준히 노력하세요!",
+                    traits: [
+                        {emoji: "🌋", title: "폭발력", text: "순간적인 강력한 에너지"},
+                        {emoji: "🔥", title: "열정", text: "뜨거운 내면의 열정"},
+                        {emoji: "⚡", title: "집중력", text: "놀라운 집중력과 몰입"},
+                        {emoji: "💎", title: "잠재력", text: "무한한 발전 가능성"}
+                    ],
+                    fortuneScore: 89
+                },
+                {
+                    type: "🧙",
+                    name: "신비로운 마법사형",
+                    description: "신비롭고 특별한 능력을 가진 마법사 같은 성격입니다. 직감이 뛰어나고 남들이 보지 못하는 것을 볼 수 있는 특별한 재능이 있어요.",
+                    personality: {
+                        basic: "신비롭고 직감적인 성격",
+                        strength: "뛰어난 직감과 통찰력",
+                        weakness: "현실과 동떨어질 수 있음",
+                        direction: "상담이나 창작 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 신비한 경험이나 특별한 만남이 많을 것입니다. 특히 보름달이 뜨는 밤에는 중요한 영감을 받을 수 있어요. 직감을 믿고 내면의 목소리에 귀 기울여보세요!",
+                    traits: [
+                        {emoji: "🔮", title: "직감", text: "예리한 직감과 예지력"},
+                        {emoji: "✨", title: "신비로움", text: "신비롭고 특별한 분위기"},
+                        {emoji: "🌙", title: "영성", text: "영적인 감수성"},
+                        {emoji: "🎭", title: "특별함", text: "남들과 다른 특별한 재능"}
+                    ],
+                    fortuneScore: 91
+                },
+                {
+                    type: "🏰",
+                    name: "고귀한 귀족형",
+                    description: "품격 있고 우아한 귀족 같은 성격입니다. 높은 교양과 세련된 매너로 주변 사람들로부터 존경받는 타입이에요.",
+                    personality: {
+                        basic: "품격 있고 우아한 성격",
+                        strength: "높은 교양과 세련된 매너",
+                        weakness: "때로 거리감이 있어 보일 수 있음",
+                        direction: "문화예술이나 고급 서비스업에서 성공"
+                    },
+                    fortunePrediction: "올해는 품격 있는 사교활동이나 문화생활이 많아질 것입니다. 특히 문화 행사나 고급 모임에서 좋은 인연을 만날 수 있어요. 자신의 품격을 유지하며 격조 높은 삶을 살아가세요!",
+                    traits: [
+                        {emoji: "👑", title: "품격", text: "고귀하고 우아한 품격"},
+                        {emoji: "🎭", title: "교양", text: "높은 교양과 지식"},
+                        {emoji: "💎", title: "세련됨", text: "세련되고 우아한 매너"},
+                        {emoji: "🏛️", title: "고급스러움", text: "고급스럽고 클래식한 취향"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🌪️",
+                    name: "자유로운 바람형",
+                    description: "자유롭고 구속받기 싫어하는 바람 같은 성격입니다. 어디든 자유롭게 돌아다니며 새로운 경험을 추구하는 모험가 타입이에요.",
+                    personality: {
+                        basic: "자유롭고 모험을 좋아하는 성격",
+                        strength: "적응력이 뛰어나고 모험심이 강함",
+                        weakness: "일관성이 부족하고 정착을 어려워함",
+                        direction: "여행이나 프리랜스 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 새로운 모험이나 여행 기회가 많이 생길 것입니다. 특히 여름철에는 예상치 못한 곳으로 떠날 수 있어요. 자유로운 마음으로 새로운 경험들을 즐겨보세요!",
+                    traits: [
+                        {emoji: "🌪️", title: "자유로움", text: "구속받지 않는 자유로운 영혼"},
+                        {emoji: "🗺️", title: "모험심", text: "새로운 곳을 탐험하는 용기"},
+                        {emoji: "🦅", title: "독립성", text: "독립적이고 자주적인 성격"},
+                        {emoji: "🌍", title: "개방성", text: "새로운 문화에 열린 마음"}
+                    ],
+                    fortuneScore: 85
+                },
+                {
+                    type: "🎯",
+                    name: "정확한 명사수형",
+                    description: "목표를 정확히 설정하고 그것을 반드시 달성하는 명사수 같은 성격입니다. 집중력과 정확성이 뛰어난 실력자 타입이에요.",
+                    personality: {
+                        basic: "정확하고 목표지향적인 성격",
+                        strength: "뛰어난 집중력과 정확성",
+                        weakness: "완벽주의 성향으로 스트레스 받을 수 있음",
+                        direction: "전문기술이나 연구 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 오랫동안 준비해온 목표를 달성할 수 있는 해입니다. 특히 겨울철에는 정확한 판단으로 큰 성과를 거둘 거예요. 목표를 향해 꾸준히 정진하세요!",
+                    traits: [
+                        {emoji: "🎯", title: "정확성", text: "정확하고 치밀한 판단력"},
+                        {emoji: "🔍", title: "집중력", text: "뛰어난 집중력과 몰입도"},
+                        {emoji: "📐", title: "체계성", text: "체계적이고 논리적인 접근"},
+                        {emoji: "🏹", title: "목표달성", text: "목표를 반드시 달성하는 의지"}
+                    ],
+                    fortuneScore: 92
+                },
+                {
+                    type: "🌳",
+                    name: "든든한 대목형",
+                    description: "대나무처럼 곧고 단단한 성격의 소유자입니다. 어떤 어려움에도 굽히지 않는 강인함과 성장하는 힘을 가지고 있어요.",
+                    personality: {
+                        basic: "곧고 단단한 성격",
+                        strength: "불굴의 의지력과 성장력",
+                        weakness: "때로 융통성이 부족할 수 있음",
+                        direction: "경영이나 공직 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 꾸준한 성장과 발전이 있는 해가 될 것입니다. 특히 계절이 바뀔 때마다 새로운 성장의 기회가 찾아올 거예요. 뿌리를 깊게 내리고 하늘을 향해 성장하세요!",
+                    traits: [
+                        {emoji: "🌳", title: "성장력", text: "끊임없이 성장하는 힘"},
+                        {emoji: "💪", title: "강인함", text: "어떤 시련도 견디는 강인함"},
+                        {emoji: "🏛️", title: "안정성", text: "흔들리지 않는 든든함"},
+                        {emoji: "🌱", title: "발전성", text: "지속적인 발전과 개선"}
+                    ],
+                    fortuneScore: 90
+                },
+                {
+                    type: "🦄",
+                    name: "환상적 유니콘형",
+                    description: "꿈과 환상을 현실로 만드는 유니콘 같은 특별한 성격입니다. 상상력이 풍부하고 불가능을 가능하게 만드는 마법 같은 능력이 있어요.",
+                    personality: {
+                        basic: "꿈을 현실로 만드는 환상적인 성격",
+                        strength: "무한한 상상력과 창조력",
+                        weakness: "현실 감각이 부족할 수 있음",
+                        direction: "창작이나 기획 분야에서 대성공"
+                    },
+                    fortunePrediction: "올해는 꿈꿔오던 일들이 현실이 되는 마법 같은 해가 될 것입니다. 특히 무지개가 뜨는 날에는 특별한 기적이 일어날 수 있어요. 상상력을 믿고 꿈을 포기하지 마세요!",
+                    traits: [
+                        {emoji: "🦄", title: "특별함", text: "세상에 하나뿐인 특별한 존재"},
+                        {emoji: "🌈", title: "상상력", text: "무한한 상상력과 창의력"},
+                        {emoji: "✨", title: "마법력", text: "불가능을 가능하게 만드는 힘"},
+                        {emoji: "💫", title: "꿈", text: "꿈을 현실로 만드는 능력"}
+                    ],
+                    fortuneScore: 95
+                },
+                {
+                    type: "🔥",
+                    name: "불꽃같은 열정형",
+                    description: "불꽃처럼 뜨겁고 열정적인 성격의 소유자입니다. 한 번 마음먹으면 모든 것을 불태워서라도 목표를 달성하는 강한 의지력이 있어요.",
+                    personality: {
+                        basic: "뜨겁고 열정적인 성격",
+                        strength: "불타는 열정과 추진력",
+                        weakness: "때로 성급하거나 감정적일 수 있음",
+                        direction: "스포츠나 영업 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 열정이 큰 결실을 맺는 해가 될 것입니다. 특히 여름 더위 속에서도 뜨거운 마음으로 일할 때 최고의 성과를 거둘 거예요. 열정을 잃지 말고 불타오르세요!",
+                    traits: [
+                        {emoji: "🔥", title: "열정", text: "모든 것을 불태우는 뜨거운 열정"},
+                        {emoji: "⚡", title: "추진력", text: "강력한 추진력과 실행력"},
+                        {emoji: "🌪️", title: "역동성", text: "역동적이고 활발한 에너지"},
+                        {emoji: "💥", title: "폭발력", text: "순간적인 폭발적 집중력"}
+                    ],
+                    fortuneScore: 93
+                },
+                {
+                    type: "🧊",
+                    name: "차가운 얼음형",
+                    description: "차갑고 냉정한 판단력을 가진 얼음 같은 성격입니다. 감정에 휘둘리지 않고 객관적으로 상황을 분석하는 뛰어난 능력이 있어요.",
+                    personality: {
+                        basic: "차갑고 냉정한 성격",
+                        strength: "객관적 판단력과 냉철함",
+                        weakness: "감정 표현이 서툴고 차가워 보일 수 있음",
+                        direction: "분석이나 금융 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 냉정한 판단이 큰 도움이 되는 해입니다. 특히 겨울철에는 당신의 차가운 이성이 빛을 발할 거예요. 감정보다는 논리로 접근하여 성공을 거두세요!",
+                    traits: [
+                        {emoji: "🧊", title: "냉정함", text: "감정에 휘둘리지 않는 냉정함"},
+                        {emoji: "⚖️", title: "객관성", text: "객관적이고 공정한 판단"},
+                        {emoji: "🔍", title: "분석력", text: "정확하고 냉철한 분석력"},
+                        {emoji: "💎", title: "순수함", text: "투명하고 순수한 마음"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "🌅",
+                    name: "희망의 새벽형",
+                    description: "새벽처럼 새로운 희망을 가져다주는 성격입니다. 어둠 속에서도 빛을 찾아내고 사람들에게 새로운 시작의 용기를 주는 능력이 있어요.",
+                    personality: {
+                        basic: "희망적이고 새로운 시작을 좋아하는 성격",
+                        strength: "희망과 용기를 주는 긍정적 에너지",
+                        weakness: "때로 현실을 너무 낙관적으로 볼 수 있음",
+                        direction: "상담이나 코칭 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 새로운 시작의 연속인 해가 될 것입니다. 특히 해가 뜰 때마다 새로운 기회가 찾아올 거예요. 희망을 잃지 말고 매일을 새로운 출발점으로 생각하세요!",
+                    traits: [
+                        {emoji: "🌅", title: "새로운 시작", text: "매일을 새롭게 시작하는 마음"},
+                        {emoji: "☀️", title: "희망", text: "어둠 속에서도 희망을 잃지 않음"},
+                        {emoji: "💪", title: "용기", text: "새로운 도전에 필요한 용기"},
+                        {emoji: "🌟", title: "긍정성", text: "모든 일을 긍정적으로 바라봄"}
+                    ],
+                    fortuneScore: 89
+                },
+                {
+                    type: "🎪",
+                    name: "즐거운 서커스형",
+                    description: "서커스처럼 재미있고 즐거운 성격의 소유자입니다. 어디서든 분위기를 밝게 만들고 사람들을 웃게 만드는 특별한 재능이 있어요.",
+                    personality: {
+                        basic: "재미있고 유쾌한 성격",
+                        strength: "뛰어난 유머 감각과 엔터테인먼트 능력",
+                        weakness: "때로 진지함이 부족해 보일 수 있음",
+                        direction: "엔터테인먼트나 서비스업에서 성공"
+                    },
+                    fortunePrediction: "올해는 웃음과 즐거움이 가득한 해가 될 것입니다. 특히 축제나 이벤트가 있는 날에는 당신이 주인공이 될 거예요. 유머와 재치로 모든 사람을 행복하게 만들어보세요!",
+                    traits: [
+                        {emoji: "🎪", title: "재미", text: "언제나 재미있고 즐거운 분위기"},
+                        {emoji: "😄", title: "유머", text: "뛰어난 유머 감각"},
+                        {emoji: "🎭", title: "연기력", text: "상황에 맞는 연기와 표현"},
+                        {emoji: "🎨", title: "창의성", text: "독창적인 아이디어와 표현"}
+                    ],
+                    fortuneScore: 86
+                },
+                {
+                    type: "🗡️",
+                    name: "날카로운 검사형",
+                    description: "검처럼 날카롭고 정의로운 성격의 소유자입니다. 옳고 그름을 분명히 하며 불의에 맞서는 용기와 의지력이 있어요.",
+                    personality: {
+                        basic: "날카롭고 정의로운 성격",
+                        strength: "강한 정의감과 결단력",
+                        weakness: "때로 융통성이 부족하고 날카로울 수 있음",
+                        direction: "법조계나 언론 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 정의를 위해 싸워야 할 일들이 생길 것입니다. 특히 불의한 일을 목격했을 때 당신의 용기가 빛을 발할 거예요. 올바른 신념을 지키며 정의로운 길을 걸어가세요!",
+                    traits: [
+                        {emoji: "🗡️", title: "정의감", text: "강한 정의감과 도덕성"},
+                        {emoji: "⚔️", title: "용기", text: "불의에 맞서는 용기"},
+                        {emoji: "🛡️", title: "보호본능", text: "약한 자를 보호하는 마음"},
+                        {emoji: "💎", title: "순수함", text: "순수하고 깨끗한 마음"}
+                    ],
+                    fortuneScore: 91
+                },
+                {
+                    type: "🌿",
+                    name: "치유의 약초형",
+                    description: "약초처럼 치유의 힘을 가진 성격입니다. 아픈 마음을 어루만지고 상처받은 사람들을 위로하는 특별한 재능이 있어요.",
+                    personality: {
+                        basic: "치유력을 가진 따뜻한 성격",
+                        strength: "뛰어난 공감 능력과 치유력",
+                        weakness: "타인의 아픔을 너무 많이 받아들여 지칠 수 있음",
+                        direction: "의료나 상담 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 치유 능력이 많은 사람들에게 도움이 될 것입니다. 특히 봄에는 새로운 생명력으로 많은 이들을 치유할 거예요. 따뜻한 마음으로 상처받은 이들을 도와주세요!",
+                    traits: [
+                        {emoji: "🌿", title: "치유력", text: "마음의 상처를 치유하는 능력"},
+                        {emoji: "💚", title: "공감능력", text: "타인의 마음을 이해하는 능력"},
+                        {emoji: "🕊️", title: "평화로움", text: "평화롭고 안정적인 에너지"},
+                        {emoji: "✨", title: "정화력", text: "부정적 에너지를 정화하는 힘"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🌀",
+                    name: "신비한 소용돌이형",
+                    description: "소용돌이처럼 신비롭고 복잡한 매력을 가진 성격입니다. 예측할 수 없는 깊이와 다면적인 매력으로 사람들을 매혹시켜요.",
+                    personality: {
+                        basic: "신비롭고 복잡한 다면적 성격",
+                        strength: "예측 불가능한 매력과 깊이",
+                        weakness: "때로 이해하기 어려워 보일 수 있음",
+                        direction: "예술이나 연구 분야에서 독특한 성공"
+                    },
+                    fortunePrediction: "올해는 예상치 못한 변화와 새로운 발견이 많은 해입니다. 특히 물이 흐르는 곳 근처에서 중요한 깨달음을 얻을 수 있어요. 복잡한 상황도 당신만의 방식으로 풀어가세요!",
+                    traits: [
+                        {emoji: "🌀", title: "신비로움", text: "예측할 수 없는 신비한 매력"},
+                        {emoji: "🔄", title: "변화", text: "끊임없이 변화하는 역동성"},
+                        {emoji: "🎭", title: "다면성", text: "여러 면을 가진 복합적 성격"},
+                        {emoji: "💫", title: "깊이", text: "깊이 있는 내면 세계"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "⚡",
+                    name: "번개같은 스피드형",
+                    description: "번개처럼 빠르고 순간적인 판단력을 가진 성격입니다. 신속한 행동력과 반응 속도로 기회를 놓치지 않는 타입이에요.",
+                    personality: {
+                        basic: "빠르고 민첩한 성격",
+                        strength: "뛰어난 순발력과 반응속도",
+                        weakness: "때로 성급하거나 깊이 생각하지 않을 수 있음",
+                        direction: "IT나 응급의료 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 빠른 판단과 행동이 큰 성과를 가져다주는 해입니다. 특히 번개가 치는 날에는 중요한 기회가 찾아올 거예요. 순간의 기회를 놓치지 말고 빠르게 행동하세요!",
+                    traits: [
+                        {emoji: "⚡", title: "스피드", text: "번개같이 빠른 행동력"},
+                        {emoji: "🏃", title: "민첩성", text: "빠른 반응과 민첩함"},
+                        {emoji: "🎯", title: "순발력", text: "순간적인 판단과 대응"},
+                        {emoji: "💨", title: "기동력", text: "뛰어난 기동력과 움직임"}
+                    ],
+                    fortuneScore: 90
+                },
+                {
+                    type: "🏔️",
+                    name: "웅장한 설산형",
+                    description: "설산처럼 웅장하고 고고한 성격의 소유자입니다. 높은 이상과 원칙을 가지고 있으며 흔들리지 않는 신념을 지키는 타입이에요.",
+                    personality: {
+                        basic: "웅장하고 고고한 성격",
+                        strength: "높은 이상과 흔들리지 않는 신념",
+                        weakness: "때로 접근하기 어려워 보일 수 있음",
+                        direction: "학술이나 종교 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 높은 이상을 향해 나아가는 해가 될 것입니다. 특히 눈이 내리는 날에는 마음의 평정을 찾을 수 있어요. 높은 목표를 설정하고 꾸준히 정진하세요!",
+                    traits: [
+                        {emoji: "🏔️", title: "웅장함", text: "크고 웅장한 기상"},
+                        {emoji: "❄️", title: "순수함", text: "눈처럼 순수하고 깨끗한 마음"},
+                        {emoji: "🎯", title: "이상", text: "높고 숭고한 이상"},
+                        {emoji: "⛰️", title: "안정감", text: "산처럼 든든한 안정감"}
+                    ],
+                    fortuneScore: 89
+                },
+                {
+                    type: "🌊",
+                    name: "깊은 바다형",
+                    description: "바다처럼 깊고 넓은 포용력을 가진 성격입니다. 모든 것을 품어 안는 너그러운 마음과 깊은 지혜를 가지고 있어요.",
+                    personality: {
+                        basic: "깊고 포용력 있는 성격",
+                        strength: "넓은 포용력과 깊은 지혜",
+                        weakness: "때로 감정의 기복이 클 수 있음",
+                        direction: "상담이나 종교 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 깊은 깨달음과 지혜를 얻는 해입니다. 특히 바다를 바라볼 때 중요한 통찰을 얻을 수 있어요. 넓은 마음으로 모든 것을 포용하며 살아가세요!",
+                    traits: [
+                        {emoji: "🌊", title: "포용력", text: "모든 것을 받아들이는 넓은 마음"},
+                        {emoji: "🐋", title: "깊이", text: "깊고 심오한 내면"},
+                        {emoji: "💙", title: "평온", text: "평온하고 안정된 마음"},
+                        {emoji: "🔄", title: "순환", text: "생명의 순환을 이해하는 지혜"}
+                    ],
+                    fortuneScore: 92
+                },
+                {
+                    type: "🎨",
+                    name: "색채의 화가형",
+                    description: "화가처럼 풍부한 감성과 표현력을 가진 성격입니다. 삶을 아름다운 작품으로 만들어가는 예술적 감각이 뛰어나요.",
+                    personality: {
+                        basic: "예술적이고 감성적인 성격",
+                        strength: "뛰어난 미적 감각과 표현력",
+                        weakness: "현실적 문제에 취약할 수 있음",
+                        direction: "예술이나 디자인 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 예술적 재능이 인정받는 해입니다. 특히 무지개가 뜨는 날에는 새로운 영감을 받을 수 있어요. 자신만의 색깔로 세상을 아름답게 칠해보세요!",
+                    traits: [
+                        {emoji: "🎨", title: "예술성", text: "뛰어난 예술적 감각"},
+                        {emoji: "🌈", title: "색감", text: "풍부한 색채 감각"},
+                        {emoji: "✨", title: "창의력", text: "무한한 상상력과 창의력"},
+                        {emoji: "💫", title: "영감", text: "순간의 영감을 놓치지 않는 능력"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🔱",
+                    name: "신성한 트라이던트형",
+                    description: "트라이던트처럼 신성하고 강력한 힘을 가진 성격입니다. 세 가지 덕목(지혜, 용기, 자비)을 모두 갖춘 완벽한 리더 타입이에요.",
+                    personality: {
+                        basic: "신성하고 완벽한 리더 성격",
+                        strength: "지혜, 용기, 자비를 모두 갖춘 완벽함",
+                        weakness: "너무 완벽해서 부담스러워할 수 있음",
+                        direction: "정치나 종교 분야에서 큰 성공"
+                    },
+                    fortunePrediction: "올해는 리더로서의 진가를 발휘하는 해입니다. 특히 중요한 결정을 내려야 할 때 당신의 완벽한 판단이 빛을 발할 거예요. 세 가지 덕목을 균형 있게 발휘하세요!",
+                    traits: [
+                        {emoji: "🔱", title: "신성함", text: "신성하고 숭고한 기운"},
+                        {emoji: "👑", title: "리더십", text: "완벽한 리더의 자질"},
+                        {emoji: "⚖️", title: "균형", text: "모든 것의 완벽한 균형"},
+                        {emoji: "💎", title: "완벽함", text: "흠 없는 완벽한 성품"}
+                    ],
+                    fortuneScore: 96
+                },
+                {
+                    type: "🌪️",
+                    name: "역동적 토네이도형",
+                    description: "토네이도처럼 강력하고 역동적인 에너지를 가진 성격입니다. 한 번 시작하면 모든 것을 바꿔놓는 강력한 변화의 힘이 있어요.",
+                    personality: {
+                        basic: "강력하고 역동적인 성격",
+                        strength: "강력한 변화력과 혁신 능력",
+                        weakness: "때로 파괴적이거나 통제하기 어려울 수 있음",
+                        direction: "혁신 기업이나 변화 관리 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 큰 변화와 혁신의 해가 될 것입니다. 특히 바람이 강하게 부는 날에는 새로운 변화의 바람을 일으킬 수 있어요. 변화를 두려워하지 말고 혁신의 리더가 되세요!",
+                    traits: [
+                        {emoji: "🌪️", title: "변화력", text: "모든 것을 바꾸는 강력한 힘"},
+                        {emoji: "⚡", title: "역동성", text: "역동적이고 활발한 에너지"},
+                        {emoji: "💨", title: "속도감", text: "빠르고 강력한 추진력"},
+                        {emoji: "🔄", title: "혁신", text: "기존 질서를 바꾸는 혁신력"}
+                    ],
+                    fortuneScore: 91
+                },
+                {
+                    type: "🌙",
+                    name: "몽환적 달빛형",
+                    description: "달빛처럼 몽환적이고 신비로운 성격입니다. 꿈과 현실 사이를 오가며 사람들에게 특별한 감동을 주는 능력이 있어요.",
+                    personality: {
+                        basic: "몽환적이고 신비로운 성격",
+                        strength: "특별한 감수성과 영감",
+                        weakness: "현실 적응이 어려울 수 있음",
+                        direction: "예술이나 문학 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 꿈같은 일들이 현실이 되는 해입니다. 특히 달이 밝은 밤에는 특별한 영감을 받을 수 있어요. 꿈을 포기하지 말고 몽환적인 아름다움을 추구하세요!",
+                    traits: [
+                        {emoji: "🌙", title: "몽환성", text: "꿈처럼 몽환적인 매력"},
+                        {emoji: "✨", title: "신비로움", text: "신비롭고 특별한 분위기"},
+                        {emoji: "🔮", title: "직감", text: "예리한 직감과 영감"},
+                        {emoji: "💫", title: "환상", text: "아름다운 환상을 현실로"}
+                    ],
+                    fortuneScore: 85
+                },
+                {
+                    type: "🦅",
+                    name: "자유로운 독수리형",
+                    description: "독수리처럼 높이 날며 자유로운 영혼을 가진 성격입니다. 넓은 시야와 날카로운 통찰력으로 미래를 내다보는 능력이 있어요.",
+                    personality: {
+                        basic: "자유롭고 통찰력 있는 성격",
+                        strength: "넓은 시야와 날카로운 통찰력",
+                        weakness: "때로 고독하거나 외로울 수 있음",
+                        direction: "경영이나 컨설팅 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 높은 곳에서 전체를 조망하며 중요한 결정을 내릴 일이 많을 것입니다. 특히 높은 곳에 올라갔을 때 중요한 통찰을 얻을 수 있어요. 자유로운 영혼을 유지하며 멀리 내다보세요!",
+                    traits: [
+                        {emoji: "🦅", title: "자유로움", text: "누구에게도 얽매이지 않는 자유"},
+                        {emoji: "👁️", title: "통찰력", text: "멀리 내다보는 예리한 시야"},
+                        {emoji: "🎯", title: "정확성", text: "정확하고 날카로운 판단"},
+                        {emoji: "⛰️", title: "고독함", text: "고독 속에서 찾는 진정한 자아"}
+                    ],
+                    fortuneScore: 90
+                },
+                {
+                    type: "🌺",
+                    name: "화려한 히비스커스형",
+                    description: "히비스커스처럼 화려하고 열정적인 성격입니다. 강렬한 아름다움과 매력으로 사람들의 시선을 사로잡는 타입이에요.",
+                    personality: {
+                        basic: "화려하고 매력적인 성격",
+                        strength: "강렬한 매력과 존재감",
+                        weakness: "때로 과시욕이 강할 수 있음",
+                        direction: "패션이나 연예 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 매력이 최고조에 달하는 해입니다. 특히 꽃이 만개하는 계절에는 모든 사람의 관심을 받을 거예요. 자신의 매력을 당당하게 드러내며 빛나세요!",
+                    traits: [
+                        {emoji: "🌺", title: "화려함", text: "화려하고 눈부신 아름다움"},
+                        {emoji: "💃", title: "매력", text: "사람들을 매혹시키는 강한 매력"},
+                        {emoji: "🎭", title: "연기력", text: "상황에 맞는 완벽한 연출"},
+                        {emoji: "✨", title: "존재감", text: "어디서든 돋보이는 강한 존재감"}
+                    ],
+                    fortuneScore: 94
+                },
+                {
+                    type: "🎼",
+                    name: "조화로운 음악형",
+                    description: "음악처럼 조화롭고 리듬감 있는 성격입니다. 모든 것을 아름다운 화음으로 만들어내는 특별한 감각이 있어요.",
+                    personality: {
+                        basic: "조화롭고 리듬감 있는 성격",
+                        strength: "뛰어난 조화 감각과 균형",
+                        weakness: "완벽한 조화를 추구해 스트레스 받을 수 있음",
+                        direction: "음악이나 예술 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 모든 것이 조화롭게 흘러가는 해입니다. 특히 음악을 들을 때 중요한 영감을 받을 수 있어요. 삶의 리듬을 찾아 아름다운 선율을 만들어가세요!",
+                    traits: [
+                        {emoji: "🎼", title: "조화", text: "모든 것의 완벽한 조화"},
+                        {emoji: "🎵", title: "리듬감", text: "삶의 리듬을 아는 감각"},
+                        {emoji: "🎭", title: "표현력", text: "감정을 아름답게 표현"},
+                        {emoji: "💫", title: "영감", text: "순간의 영감을 음악으로"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "⭐",
+                    name: "빛나는 별형",
+                    description: "밤하늘의 별처럼 반짝이는 특별한 매력을 가진 타입입니다. 어둠 속에서도 빛을 발하며 희망의 메시지를 전하는 능력이 있어요.",
+                    personality: {
+                        basic: "특별하고 빛나는 성격",
+                        strength: "독특한 매력과 희망적 메시지",
+                        weakness: "때로 너무 특별해서 외로울 수 있음",
+                        direction: "연예계나 영감을 주는 분야에서 성공"
+                    },
+                    fortunePrediction: "올해는 당신의 특별한 재능이 빛을 발할 것입니다. 특히 밤하늘이 맑은 날에는 새로운 영감을 받을 수 있어요. 자신만의 빛을 믿고 당당하게 빛내보세요!",
+                    traits: [
+                        {emoji: "⭐", title: "특별함", text: "남들과 다른 특별한 매력"},
+                        {emoji: "✨", title: "빛남", text: "어둠 속에서도 빛나는 존재"},
+                        {emoji: "🌟", title: "희망", text: "희망의 메시지를 전함"},
+                        {emoji: "💫", title: "영감", text: "타인에게 영감을 주는 능력"}
+                    ],
+                    fortuneScore: 89
+                }
+            ],
+            en: [
+                {
+                    type: "👑",
+                    name: "The Regal Leader",
+                    description: "You possess natural leadership qualities and charisma. With strong willpower and decisiveness, you can overcome any challenge and guide others to success.",
+                    personality: {
+                        basic: "Confident and commanding presence",
+                        strength: "Exceptional leadership and decision-making abilities",
+                        weakness: "Can sometimes be overly authoritative or stubborn",
+                        direction: "Management roles or entrepreneurship offer great success potential"
+                    },
+                    fortunePrediction: "This year will bring numerous opportunities for new projects and ventures. Especially in the latter half of the year, you'll face important decisions. Listen to advice from others while making careful judgments!",
+                    traits: [
+                        {emoji: "👑", title: "Leadership", text: "Natural born leader with commanding presence"},
+                        {emoji: "💪", title: "Strength", text: "Unwavering willpower to overcome obstacles"},
+                        {emoji: "🎯", title: "Goal-Oriented", text: "Clear objectives with strong drive"},
+                        {emoji: "⚡", title: "Decisiveness", text: "Quick judgment and execution skills"}
+                    ],
+                    fortuneScore: 92
+                },
+                {
+                    type: "🧠",
+                    name: "The Wise Scholar",
+                    description: "You possess deep thoughtfulness and intellectual insight, with a natural inclination toward learning and wisdom.",
+                    personality: {
+                        basic: "Calm and thoughtful nature",
+                        strength: "Excellent analytical and judgment skills",
+                        weakness: "Sometimes too cautious, may miss opportunities",
+                        direction: "Success in specialized professional fields"
+                    },
+                    fortunePrediction: "This year will bring opportunities to acquire new knowledge and develop expertise. Especially in autumn, you'll gain important insights. Continuous learning and research will lead to great achievements!",
+                    traits: [
+                        {emoji: "📚", title: "Intellectual Curiosity", text: "Constant desire for learning"},
+                        {emoji: "🔍", title: "Analytical Mind", text: "Deep thinking and analysis skills"},
+                        {emoji: "💡", title: "Insight", text: "Ability to see through to the essence"},
+                        {emoji: "🤔", title: "Prudence", text: "Careful and systematic approach"}
+                    ],
+                    fortuneScore: 85
+                },
+                {
+                    type: "🌟",
+                    name: "The Social Butterfly",
+                    description: "You have a bright and outgoing personality that attracts people. With excellent communication skills and charm, you're welcomed everywhere you go.",
+                    personality: {
+                        basic: "Bright and extroverted personality",
+                        strength: "Outstanding communication and social skills",
+                        weakness: "May focus too much on appearances rather than depth",
+                        direction: "Success in service industry or sales"
+                    },
+                    fortunePrediction: "This year will bring many good opportunities through networking. Especially in summer, new connections could change your life. Engage actively in communication for greater success!",
+                    traits: [
+                        {emoji: "😊", title: "Charm", text: "Natural ability to connect with people"},
+                        {emoji: "💬", title: "Communication", text: "Excellent conversation skills"},
+                        {emoji: "🎉", title: "Vivacity", text: "Energetic and lively personality"},
+                        {emoji: "🤝", title: "Networking", text: "Broad relationship management skills"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🛡️",
+                    name: "The Loyal Guardian",
+                    description: "You have a strong sense of responsibility and are highly trustworthy. With a warm heart that dedicates itself to family and friends, you're a reliable supporter.",
+                    personality: {
+                        basic: "Responsible and trustworthy character",
+                        strength: "Devoted and dependable supporter role",
+                        weakness: "May get stressed by prioritizing others over yourself",
+                        direction: "Success in education or counseling fields"
+                    },
+                    fortunePrediction: "This year you'll receive great gratitude from family and friends. Especially in spring, someone will need your help. Your kind assistance will bring good fortune in return!",
+                    traits: [
+                        {emoji: "❤️", title: "Devotion", text: "Sacrificial spirit for others"},
+                        {emoji: "🤗", title: "Acceptance", text: "Heart that embraces everything"},
+                        {emoji: "💪", title: "Responsibility", text: "Commitment to see things through"},
+                        {emoji: "🏠", title: "Family-Oriented", text: "Values family and home"}
+                    ],
+                    fortuneScore: 90
+                },
+                {
+                    type: "🎨",
+                    name: "The Creative Artist",
+                    description: "You possess unique sensitivity and creativity. With an artistic perspective different from others, you have the ability to create new things.",
+                    personality: {
+                        basic: "Emotional and creative personality",
+                        strength: "Original ideas and artistic sensibility",
+                        weakness: "May struggle with practical matters",
+                        direction: "Success in arts or creative fields"
+                    },
+                    fortunePrediction: "This year will bring opportunities for your creative talents to shine. Especially in winter, you'll gain unexpected inspiration. Keep creating while maintaining your unique style!",
+                    traits: [
+                        {emoji: "🎭", title: "Artistic Sense", text: "Natural aesthetic sensibility"},
+                        {emoji: "💭", title: "Imagination", text: "Rich imagination and creativity"},
+                        {emoji: "🌈", title: "Originality", text: "Unique perspective different from others"},
+                        {emoji: "✨", title: "Inspiration", text: "Ability to capture moments of inspiration"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "⚖️",
+                    name: "The Just Judge",
+                    description: "You have a strong sense of justice and fair judgment. With clear distinctions between right and wrong, you solve problems with balanced perspective.",
+                    personality: {
+                        basic: "Just and fair character",
+                        strength: "Balanced judgment and moral integrity",
+                        weakness: "Sometimes too strict, may lack flexibility",
+                        direction: "Success in legal or public service fields"
+                    },
+                    fortunePrediction: "This year will bring many situations requiring important decisions. Especially in summer, your fair judgment will help many people. Maintain principles while showing flexibility!",
+                    traits: [
+                        {emoji: "⚖️", title: "Fairness", text: "Impartial and objective judgment"},
+                        {emoji: "🔍", title: "Analysis", text: "Ability to accurately assess situations"},
+                        {emoji: "💯", title: "Principles", text: "Clear distinction between right and wrong"},
+                        {emoji: "🎯", title: "Precision", text: "Accurate and careful judgment"}
+                    ],
+                    fortuneScore: 89
+                },
+                {
+                    type: "🌱",
+                    name: "The Pure Nature",
+                    description: "You have a pure and natural heart. With genuine and unpretentious character, you bring comfort to people around you.",
+                    personality: {
+                        basic: "Pure and natural personality",
+                        strength: "Authenticity and purity are your charm",
+                        weakness: "Easily hurt by the world's complexities",
+                        direction: "Success in nature-related fields or healing businesses"
+                    },
+                    fortunePrediction: "This year will bring more time with nature. Especially in spring, good news signaling new beginnings will come. Live naturally while keeping your pure heart!",
+                    traits: [
+                        {emoji: "🌿", title: "Nature-Loving", text: "Heart that loves nature"},
+                        {emoji: "💚", title: "Purity", text: "Genuine and authentic character"},
+                        {emoji: "🕊️", title: "Peacefulness", text: "Pursuit of inner peace"},
+                        {emoji: "🌸", title: "Healing", text: "Ability to comfort others"}
+                    ],
+                    fortuneScore: 84
+                },
+                {
+                    type: "🔥",
+                    name: "The Passionate Challenger",
+                    description: "You have burning passion and challenging spirit. Without fear of new things, you actively pioneer your life with determination.",
+                    personality: {
+                        basic: "Passionate and challenging personality",
+                        strength: "Strong drive and adventurous spirit",
+                        weakness: "Sometimes hasty, may make mistakes",
+                        direction: "Success in sports or adventure-related fields"
+                    },
+                    fortunePrediction: "This year will bring many opportunities for new challenges. Especially in autumn, a time of great change awaits. Don't be afraid - trust your passion and take on challenges!",
+                    traits: [
+                        {emoji: "🔥", title: "Passion", text: "Burning passion and energy"},
+                        {emoji: "🚀", title: "Challenge", text: "Courage to try new things"},
+                        {emoji: "⚡", title: "Drive", text: "Powerful execution ability"},
+                        {emoji: "🏆", title: "Competitiveness", text: "Strong will to succeed"}
+                    ],
+                    fortuneScore: 91
+                },
+                {
+                    type: "🧘",
+                    name: "The Peaceful Sage",
+                    description: "You pursue inner peace and stability. Through deep reflection and meditation, you gain wisdom and have the ability to advise others.",
+                    personality: {
+                        basic: "Peaceful and reflective personality",
+                        strength: "Deep inner wisdom and composure",
+                        weakness: "May neglect worldly desires at times",
+                        direction: "Success in counseling or spiritual fields"
+                    },
+                    fortunePrediction: "This year will be a time of inner growth and enlightenment. Especially in winter, you'll gain important insights. Find inner peace through meditation and reflection!",
+                    traits: [
+                        {emoji: "🧘", title: "Composure", text: "Unshakeable peace of mind"},
+                        {emoji: "🌅", title: "Reflection", text: "Deep inner contemplation"},
+                        {emoji: "☯️", title: "Balance", text: "Pursuit of harmony and equilibrium"},
+                        {emoji: "💫", title: "Wisdom", text: "Deep insight and understanding"}
+                    ],
+                    fortuneScore: 86
+                },
+                {
+                    type: "💰",
+                    name: "The Wealthy Fortune",
+                    description: "You have natural wealth luck and business acumen. With excellent money-making and management abilities, you have high potential for economic success.",
+                    personality: {
+                        basic: "Practical with excellent economic sense",
+                        strength: "Outstanding business acumen and financial management",
+                        weakness: "May focus too much on material values",
+                        direction: "Success in business or investment fields"
+                    },
+                    fortunePrediction: "This year will be very fortunate for wealth. Especially in summer, opportunities for great profits will arise. Achieve great results through careful investment and planned financial management!",
+                    traits: [
+                        {emoji: "💰", title: "Wealth Luck", text: "Natural money-making ability"},
+                        {emoji: "📈", title: "Investment Sense", text: "Excellent investment judgment"},
+                        {emoji: "🏦", title: "Economic Sense", text: "Practical financial awareness"},
+                        {emoji: "💎", title: "Value Recognition", text: "Eye for recognizing valuable things"}
+                    ],
+                    fortuneScore: 94
+                },
+                {
+                    type: "❤️",
+                    name: "The Charming Heart",
+                    description: "You have natural charm and a lovable personality. With special magnetism that attracts people, your love luck is also excellent.",
+                    personality: {
+                        basic: "Lovely and charming personality",
+                        strength: "Outstanding charm and social skills",
+                        weakness: "Sometimes emotional and unpredictable",
+                        direction: "Success in entertainment or service industries"
+                    },
+                    fortunePrediction: "This year will be excellent for romance. Especially in spring, you might meet your destiny. Confidently express your charm and create good relationships!",
+                    traits: [
+                        {emoji: "💕", title: "Charm", text: "Natural magnetism and attraction"},
+                        {emoji: "😍", title: "Beloved", text: "Ability to receive people's love"},
+                        {emoji: "🌺", title: "Elegance", text: "Graceful and refined charm"},
+                        {emoji: "💖", title: "Emotion", text: "Rich emotional expression"}
+                    ],
+                    fortuneScore: 93
+                },
+                {
+                    type: "🏃",
+                    name: "The Active Athlete",
+                    description: "You have healthy and vibrant energy. With excellent physical fitness and love for exercise, you pursue a healthy lifestyle.",
+                    personality: {
+                        basic: "Healthy and active personality",
+                        strength: "Excellent physical fitness and health management",
+                        weakness: "Sometimes too active, may tire others",
+                        direction: "Success in sports or healthcare fields"
+                    },
+                    fortunePrediction: "This year will be excellent for health luck. Especially in summer, it's a good time to start new exercise or activities. Create a healthier and more vibrant life through consistent exercise!",
+                    traits: [
+                        {emoji: "💪", title: "Fitness", text: "Excellent physical strength and health"},
+                        {emoji: "🏃", title: "Activity", text: "Active and dynamic personality"},
+                        {emoji: "🌟", title: "Energy", text: "Overflowing energy and vitality"},
+                        {emoji: "🏆", title: "Challenge", text: "Personality that enjoys new challenges"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🎭",
+                    name: "The Talented Performer",
+                    description: "You have acting abilities to portray various personas. With excellent adaptability and the ability to entertain people, you shine in performance.",
+                    personality: {
+                        basic: "Versatile with rich expression",
+                        strength: "Excellent acting ability and adaptability",
+                        weakness: "May sometimes lose your true self",
+                        direction: "Success in entertainment or performance fields"
+                    },
+                    fortunePrediction: "This year will bring opportunities for your talents to be recognized by many. Especially in autumn, you might have a chance to be on stage. Believe in your talents and express yourself confidently!",
+                    traits: [
+                        {emoji: "🎭", title: "Acting", text: "Excellent performance and expression skills"},
+                        {emoji: "🎪", title: "Entertainment", text: "Talent for making people happy"},
+                        {emoji: "🎨", title: "Creativity", text: "Creative expression and ideas"},
+                        {emoji: "✨", title: "Stage Presence", text: "Special charm on stage"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "🌊",
+                    name: "The Flowing Water",
+                    description: "You are flexible and highly adaptable like water. You can change freely according to situations and wisely navigate through difficult circumstances.",
+                    personality: {
+                        basic: "Flexible with excellent adaptability",
+                        strength: "Outstanding adaptability and flexibility",
+                        weakness: "May lack consistency at times",
+                        direction: "Success in consulting or mediation fields"
+                    },
+                    fortunePrediction: "This year will be a time of change. Especially in summer, opportunities for great change will come. Don't fear change - adapt flexibly like water!",
+                    traits: [
+                        {emoji: "🌊", title: "Flexibility", text: "Flexible response to situations"},
+                        {emoji: "🧘", title: "Adaptability", text: "Adaptation to any environment"},
+                        {emoji: "💧", title: "Flow", text: "Natural acceptance of change"},
+                        {emoji: "🌀", title: "Transformation", text: "Growth through change"}
+                    ],
+                    fortuneScore: 85
+                },
+                {
+                    type: "🌸",
+                    name: "The Spring Hope",
+                    description: "You have hope and positive energy. Even in difficult situations, you don't lose hope and give courage to people around you.",
+                    personality: {
+                        basic: "Hopeful and positive personality",
+                        strength: "Unwavering hope and positive energy",
+                        weakness: "May sometimes fail to face reality",
+                        direction: "Success in education or counseling fields"
+                    },
+                    fortunePrediction: "This year will be about planting seeds of new hope. Especially in spring, long-awaited good news will come. Live with hope and maintain a positive heart!",
+                    traits: [
+                        {emoji: "🌸", title: "Hope", text: "Always hopeful heart"},
+                        {emoji: "☀️", title: "Positivity", text: "Positive energy"},
+                        {emoji: "🌱", title: "Growth", text: "Continuous will to grow"},
+                        {emoji: "💖", title: "Encouragement", text: "Ability to encourage others"}
+                    ],
+                    fortuneScore: 89
+                },
+                {
+                    type: "🦅",
+                    name: "The Sharp Eagle",
+                    description: "You have keen intuition and insight. With farsighted vision and ability to grasp essentials, you excel in analysis.",
+                    personality: {
+                        basic: "Sharp and insightful personality",
+                        strength: "Excellent intuition and analytical skills",
+                        weakness: "Sometimes too sharp, may hurt others",
+                        direction: "Success in analysis or research fields"
+                    },
+                    fortunePrediction: "This year your intuition will be of great help. Especially in winter, you'll gain important insights. Trust your intuition but be careful not to express it too emotionally!",
+                    traits: [
+                        {emoji: "🦅", title: "Sharpness", text: "Keen intuition and insight"},
+                        {emoji: "🔍", title: "Analysis", text: "Deep analytical abilities"},
+                        {emoji: "🎯", title: "Precision", text: "Accurate judgment and prediction"},
+                        {emoji: "👁️", title: "Vision", text: "Insight that sees through essence"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🌙",
+                    name: "The Mystical Moon",
+                    description: "You have mysterious and intuitive abilities. With rich sensitivity and interest in spiritual matters, you can demonstrate special powers.",
+                    personality: {
+                        basic: "Mysterious with rich sensitivity",
+                        strength: "Excellent intuition and spiritual sensitivity",
+                        weakness: "May be disconnected from reality at times",
+                        direction: "Success in arts or spiritual fields"
+                    },
+                    fortunePrediction: "This year will bring opportunities for mysterious experiences and enlightenment. Especially on full moon nights, you might receive special inspiration. Listen to your inner voice and follow your intuition!",
+                    traits: [
+                        {emoji: "🌙", title: "Mystery", text: "Mysterious and dreamy charm"},
+                        {emoji: "🔮", title: "Intuition", text: "Excellent intuition and premonition"},
+                        {emoji: "✨", title: "Spirituality", text: "Spiritual sensitivity and enlightenment"},
+                        {emoji: "🎨", title: "Artistry", text: "Artistic sense and creativity"}
+                    ],
+                    fortuneScore: 86
+                },
+                {
+                    type: "🌟",
+                    name: "The Bright Sun",
+                    description: "You brighten your surroundings with bright and warm energy. With a positive mind, you give hope and courage to people.",
+                    personality: {
+                        basic: "Bright and warm personality",
+                        strength: "Positive energy and leadership",
+                        weakness: "Sometimes too bright, may be tiring",
+                        direction: "Success in education or entertainment fields"
+                    },
+                    fortunePrediction: "This year your bright energy will help many people. Especially in summer, you'll have opportunities to take leadership roles. Maintain your positive mind and brighten your surroundings!",
+                    traits: [
+                        {emoji: "☀️", title: "Brightness", text: "Bright and warm energy"},
+                        {emoji: "😊", title: "Positivity", text: "Always positive mind"},
+                        {emoji: "🌻", title: "Vitality", text: "Overflowing vitality and life force"},
+                        {emoji: "💛", title: "Warmth", text: "Heart that warmly embraces people"}
+                    ],
+                    fortuneScore: 92
+                },
+                {
+                    type: "🏔️",
+                    name: "The Steady Mountain",
+                    description: "You have a steady and stable personality like a mountain. With unwavering willpower, you can silently endure through difficult situations.",
+                    personality: {
+                        basic: "Steady and stable personality",
+                        strength: "Strong willpower and perseverance",
+                        weakness: "Sometimes stubborn and slow to change",
+                        direction: "Success in construction or manufacturing fields"
+                    },
+                    fortunePrediction: "This year will be about reaping the fruits of long efforts. Especially in autumn, you'll achieve great results. Accomplish your goals through consistency and perseverance!",
+                    traits: [
+                        {emoji: "🏔️", title: "Stability", text: "Unshakeable steadiness"},
+                        {emoji: "💪", title: "Willpower", text: "Strong mental fortitude"},
+                        {emoji: "🛡️", title: "Protection", text: "Ability to protect others"},
+                        {emoji: "⏰", title: "Patience", text: "Endurance to persevere till the end"}
+                    ],
+                    fortuneScore: 90
+                },
+                {
+                    type: "🦋",
+                    name: "The Transforming Butterfly",
+                    description: "You undergo beautiful changes and continuous growth. With the ability to constantly evolve and create your own unique colors.",
+                    personality: {
+                        basic: "Enjoys change and growth",
+                        strength: "Excellent adaptability and growth ability",
+                        weakness: "Sometimes too frequent changes may cause anxiety",
+                        direction: "Success in fashion or beauty fields"
+                    },
+                    fortunePrediction: "This year will be a time of great change and growth. Especially in spring, you can transform into a completely new self. Don't fear change - embrace beautiful transformation!",
+                    traits: [
+                        {emoji: "🦋", title: "Transformation", text: "Beautiful change and growth"},
+                        {emoji: "🌈", title: "Diversity", text: "Charm of various colors"},
+                        {emoji: "✨", title: "Beauty", text: "Natural beauty"},
+                        {emoji: "🌸", title: "Growth", text: "Continuous growth and development"}
+                    ],
+                    fortuneScore: 87
+                },
+                {
+                    type: "🐅",
+                    name: "The Brave Tiger",
+                    description: "You have brave and dignified spirit. With strong charisma and decisiveness, you can face any difficult situation courageously.",
+                    personality: {
+                        basic: "Brave and dignified personality",
+                        strength: "Strong charisma and leadership",
+                        weakness: "Sometimes too strong, may be intimidating",
+                        direction: "Success in management or military fields"
+                    },
+                    fortunePrediction: "This year will bring great challenges and opportunities together. Especially in winter, situations requiring courage will arise. Trust your bravery and face them courageously!",
+                    traits: [
+                        {emoji: "🐅", title: "Bravery", text: "Fearless courage"},
+                        {emoji: "👑", title: "Charisma", text: "Strong charisma and dignity"},
+                        {emoji: "⚔️", title: "Decisiveness", text: "Quick and accurate decisions"},
+                        {emoji: "🔥", title: "Passion", text: "Burning passion and will"}
+                    ],
+                    fortuneScore: 93
+                },
+                {
+                    type: "🕊️",
+                    name: "The Peaceful Dove",
+                    description: "You have a peaceful and gentle personality. With the ability to resolve conflicts harmoniously and get along well with everyone.",
+                    personality: {
+                        basic: "Peaceful and gentle personality",
+                        strength: "Excellent harmony ability and peacefulness",
+                        weakness: "May make problems worse by avoiding conflicts",
+                        direction: "Success in diplomacy or mediation fields"
+                    },
+                    fortunePrediction: "This year will be a year of harmony and unity. Especially in spring, long-standing conflicts may be resolved. Create good relationships with everyone with a peaceful mind!",
+                    traits: [
+                        {emoji: "🕊️", title: "Peace", text: "Peaceful and harmonious heart"},
+                        {emoji: "🤝", title: "Harmony", text: "Ability to bring people together"},
+                        {emoji: "💙", title: "Gentleness", text: "Gentle and soft personality"},
+                        {emoji: "🌿", title: "Healing", text: "Ability to heal hearts"}
+                    ],
+                    fortuneScore: 88
+                },
+                {
+                    type: "🌊",
+                    name: "The Wise Ocean",
+                    description: "You have a deep and broad heart like the ocean. With the generous heart that embraces everything and deep wisdom.",
+                    personality: {
+                        basic: "Deep and broad-hearted personality",
+                        strength: "Acceptance and deep wisdom",
+                        weakness: "Sometimes too deep, may be hard to understand",
+                        direction: "Success in philosophy or religious fields"
+                    },
+                    fortunePrediction: "This year will be about gaining deep enlightenment and wisdom. Especially in summer, you'll discover important life truths. Embrace everything with an ocean-like broad heart!",
+                    traits: [
+                        {emoji: "🌊", title: "Acceptance", text: "Heart that accepts everything"},
+                        {emoji: "🧠", title: "Wisdom", text: "Deep wisdom and insight"},
+                        {emoji: "💙", title: "Tranquility", text: "Peaceful and calm heart"},
+                        {emoji: "🔄", title: "Cycle", text: "Understanding of life's cycles"}
+                    ],
+                    fortuneScore: 91
+                },
+                {
+                    type: "🎪",
+                    name: "The Joyful Circus",
+                    description: "You have a fun and cheerful personality like a circus. With the special talent to brighten the atmosphere anywhere and make people laugh.",
+                    personality: {
+                        basic: "Fun and cheerful personality",
+                        strength: "Excellent humor and entertainment ability",
+                        weakness: "May appear to lack seriousness at times",
+                        direction: "Success in entertainment or service industries"
+                    },
+                    fortunePrediction: "This year will be full of laughter and joy. Especially on festival or event days, you'll be the star. Make everyone happy with your humor and wit!",
+                    traits: [
+                        {emoji: "🎪", title: "Fun", text: "Always fun and joyful atmosphere"},
+                        {emoji: "😄", title: "Humor", text: "Excellent sense of humor"},
+                        {emoji: "🎭", title: "Performance", text: "Acting and expression suited to situations"},
+                        {emoji: "🎨", title: "Creativity", text: "Original ideas and expressions"}
+                    ],
+                    fortuneScore: 86
+                },
+                {
+                    type: "⭐",
+                    name: "The Shining Star",
+                    description: "You have special charm that sparkles like a star in the night sky. With the ability to shine even in darkness and deliver messages of hope.",
+                    personality: {
+                        basic: "Special and shining personality",
+                        strength: "Unique charm and hopeful message",
+                        weakness: "Sometimes too special, may feel lonely",
+                        direction: "Success in entertainment or inspirational fields"
+                    },
+                    fortunePrediction: "This year your special talents will shine. Especially on clear nights, you'll receive new inspiration. Believe in your unique light and shine confidently!",
+                    traits: [
+                        {emoji: "⭐", title: "Uniqueness", text: "Special charm different from others"},
+                        {emoji: "✨", title: "Brilliance", text: "Existence that shines even in darkness"},
+                        {emoji: "🌟", title: "Hope", text: "Delivering messages of hope"},
+                        {emoji: "💫", title: "Inspiration", text: "Ability to inspire others"}
+                    ],
+                    fortuneScore: 89
+                }
+            ]
+        };
+
+        // 언어 전환 함수
+        function switchLanguage(lang) {
+            if (lang === currentLanguage) return;
+            
+            currentLanguage = lang;
+            
+            // 버튼 상태 업데이트
+            document.getElementById('koBtn').classList.toggle('active', lang === 'ko');
+            document.getElementById('enBtn').classList.toggle('active', lang === 'en');
+            
+            // HTML lang 속성 변경
+            document.getElementById('htmlLang').setAttribute('lang', lang);
+            
+            // 메타 데이터 업데이트
+            updateMetaData(lang);
+            
+            // 텍스트 업데이트
+            updateTexts(lang);
+            
+            // URL 파라미터 업데이트 (가능한 경우)
+            try {
+                const url = new URL(window.location);
+                url.searchParams.set('lang', lang);
+                window.history.replaceState({}, '', url);
+            } catch (error) {
+                console.log('URL 업데이트를 건너뜁니다:', error.message);
+            }
+        }
+
+        // 메타 데이터 업데이트
+        function updateMetaData(lang) {
+            const texts = translations[lang];
+            
+            document.getElementById('pageTitle').textContent = texts.pageTitle;
+            document.getElementById('pageDescription').setAttribute('content', texts.pageDescription);
+            document.getElementById('ogTitle').setAttribute('content', texts.ogTitle);
+            document.getElementById('ogDescription').setAttribute('content', texts.ogDescription);
+            document.title = texts.pageTitle;
+        }
+
+        // 텍스트 업데이트
+        function updateTexts(lang) {
+            const texts = translations[lang];
+            
+            // 각 요소 업데이트
+            for (const [key, value] of Object.entries(texts)) {
+                const element = document.getElementById(key);
+                if (element) {
+                    if (element.tagName === 'OPTION') {
+                        element.textContent = value;
+                    } else if (element.tagName === 'INPUT' || element.tagName === 'BUTTON') {
+                        element.textContent = value;
+                    } else {
+                        element.innerHTML = value;
+                    }
+                }
+            }
+        }
+
+        // 분석 버튼 활성화 체크
+        function checkAnalyzeButton() {
+            const hasImage = window.currentImageData;
+            const hasGender = document.getElementById('genderSelect').value;
+            const hasAge = document.getElementById('ageSelect').value;
+            const hasSeason = document.getElementById('seasonSelect').value;
+            const hasInterest = document.getElementById('interestSelect').value;
+            
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            analyzeBtn.disabled = !(hasImage && hasGender && hasAge && hasSeason && hasInterest);
+        }
+
+        // 이미지 업로드 처리
+        document.getElementById('imageUpload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            
+            if (file) {
+                if (!file.type.startsWith('image/')) {
+                    const message = currentLanguage === 'ko' 
+                        ? '이미지 파일만 업로드 가능합니다.'
+                        : 'Please upload only image files.';
+                    alert(message);
+                    return;
+                }
+                
+                if (file.size > 10 * 1024 * 1024) {
+                    const message = currentLanguage === 'ko' 
+                        ? '파일 크기는 10MB 이하여야 합니다.'
+                        : 'File size must be 10MB or less.';
+                    alert(message);
+                    return;
+                }
+                
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    const previewImage = document.getElementById('previewImage');
+                    const previewContainer = document.getElementById('previewContainer');
+                    
+                    previewImage.src = e.target.result;
+                    previewContainer.style.display = 'block';
+                    
+                    window.currentImageData = e.target.result;
+                    
+                    previewImage.onload = function() {
+                        checkAnalyzeButton();
+                        previewContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    };
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // 입력 필드 이벤트 리스너들
+        document.getElementById('genderSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('ageSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('seasonSelect').addEventListener('change', checkAnalyzeButton);
+        document.getElementById('interestSelect').addEventListener('change', checkAnalyzeButton);
+
+        // 드래그 앤 드롭 기능
+        const uploadSection = document.getElementById('uploadSection');
+        
+        uploadSection.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.add('dragover');
+        });
+        
+        uploadSection.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.remove('dragover');
+        });
+        
+        uploadSection.addEventListener('drop', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            uploadSection.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+                
+                if (!file.type.startsWith('image/')) {
+                    const message = currentLanguage === 'ko' 
+                        ? '이미지 파일만 업로드 가능합니다.'
+                        : 'Please upload only image files.';
+                    alert(message);
+                    return;
+                }
+                
+                const fileInput = document.getElementById('imageUpload');
+                const dt = new DataTransfer();
+                dt.items.add(file);
+                fileInput.files = dt.files;
+                
+                const event = new Event('change', { bubbles: true });
+                fileInput.dispatchEvent(event);
+            }
+        });
+
+        // 간단한 해시 함수
+        function simpleHash(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return Math.abs(hash);
+        }
+
+        // 관상 결과 결정 함수
+        function getFaceReadingFromData(imageData, gender, age, season, interest) {
+            const combinedData = (imageData || '') + gender + age + season + interest;
+            const hash = simpleHash(combinedData);
+            
+            const data = faceReadingData[currentLanguage];
+            const resultIndex = hash % data.length;
+            return data[resultIndex];
+        }
+
+        // 관상 분석
+        function analyzeFace() {
+            if (!window.currentImageData) {
+                const message = currentLanguage === 'ko' 
+                    ? '사진을 먼저 업로드해주세요!'
+                    : 'Please upload a photo first!';
+                alert(message);
+                return;
+            }
+            
+            const gender = document.getElementById('genderSelect').value;
+            const age = document.getElementById('ageSelect').value;
+            const season = document.getElementById('seasonSelect').value;
+            const interest = document.getElementById('interestSelect').value;
+            
+            if (!gender || !age || !season || !interest) {
+                const message = currentLanguage === 'ko' 
+                    ? '모든 정보를 입력해주세요!'
+                    : 'Please fill in all information!';
+                alert(message);
+                return;
+            }
+            
+            document.getElementById('loading').style.display = 'block';
+            document.querySelector('.upload-section').style.display = 'none';
+            document.querySelector('.input-section').style.display = 'none';
+            
+            setTimeout(() => {
+                const selectedResult = getFaceReadingFromData(
+                    window.currentImageData, 
+                    gender, 
+                    age, 
+                    season, 
+                    interest
+                );
+                
+                displayResult(selectedResult);
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('resultSection').style.display = 'block';
+                
+                window.currentFaceResult = selectedResult;
+                window.currentUserInfo = { gender, age, season, interest };
+                
+                document.getElementById('resultSection').scrollIntoView({behavior: 'smooth'});
+            }, 4000);
+        }
+
+        // 결과 표시 함수
+        function displayResult(result) {
+            document.getElementById('faceType').textContent = result.type;
+            document.getElementById('faceTypeName').textContent = result.name;
+            document.getElementById('faceDescription').textContent = result.description;
+            
+            const fortuneText = currentLanguage === 'ko' 
+                ? `🌟 종합 운세: ${result.fortuneScore}점`
+                : `🌟 Overall Fortune Score: ${result.fortuneScore}/100`;
+            document.getElementById('fortuneScore').textContent = fortuneText;
+            
+            document.getElementById('fortunePredictionText').textContent = result.fortunePrediction;
+            
+            // 성격 상세 정보 업데이트
+            document.getElementById('basicPersonalityText').textContent = result.personality.basic;
+            document.getElementById('strengthsText').textContent = result.personality.strength;
+            document.getElementById('challengesText').textContent = result.personality.weakness;
+            document.getElementById('directionText').textContent = result.personality.direction;
+            
+            // 특징 표시
+            const traitsGrid = document.getElementById('traitsGrid');
+            traitsGrid.innerHTML = '';
+            result.traits.forEach(trait => {
+                const item = document.createElement('div');
+                item.className = 'trait-item';
+                item.innerHTML = `
+                    <div class="trait-emoji">${trait.emoji}</div>
+                    <div class="trait-title">${trait.title}</div>
+                    <div class="trait-text">${trait.text}</div>
+                `;
+                traitsGrid.appendChild(item);
+            });
+        }
+
+        // 공유용 이미지 생성
+        function generateShareImage() {
+            if (!window.currentFaceResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 관상 분석을 완료해주세요!'
+                    : 'Please complete face reading analysis first!';
+                alert(message);
+                return null;
+            }
+
+            const canvas = document.getElementById('shareCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // 배경 그라디언트
+            const gradient = ctx.createLinearGradient(0, 0, 0, 800);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(0.5, '#764ba2');
+            gradient.addColorStop(1, '#f093fb');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 600, 800);
+            
+            // 반투명 흰색 배경
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+            roundRect(ctx, 50, 100, 500, 600, 20);
+            ctx.fill();
+            
+            // 제목
+            ctx.fillStyle = '#333';
+            ctx.font = 'bold 32px Arial, sans-serif';
+            ctx.textAlign = 'center';
+            const title = currentLanguage === 'ko' 
+                ? '🔮 관상으로 보는 성격분석'
+                : '🔮 AI Face Reading Analysis';
+            ctx.fillText(title, 300, 160);
+            
+            // 관상 타입
+            ctx.font = '120px Arial, sans-serif';
+            ctx.fillText(window.currentFaceResult.type, 300, 280);
+            
+            // 관상 이름
+            ctx.fillStyle = '#FF6B6B';
+            ctx.font = 'bold 36px Arial, sans-serif';
+            ctx.fillText(window.currentFaceResult.name, 300, 350);
+            
+            // 설명
+            ctx.fillStyle = '#555';
+            ctx.font = '18px Arial, sans-serif';
+            ctx.textAlign = 'center';
+            wrapText(ctx, window.currentFaceResult.description, 300, 430, 400, 25);
+            
+            // 운세 점수
+            ctx.fillStyle = '#FFD700';
+            ctx.font = 'bold 28px Arial, sans-serif';
+            const scoreText = currentLanguage === 'ko' 
+                ? `🌟 종합 운세: ${window.currentFaceResult.fortuneScore}점`
+                : `🌟 Fortune Score: ${window.currentFaceResult.fortuneScore}/100`;
+            ctx.fillText(scoreText, 300, 520);
+            
+            // 하단 URL
+            ctx.fillStyle = '#999';
+            ctx.font = '18px Arial, sans-serif';
+            const urlText = currentLanguage === 'ko' 
+                ? '🔮 관상으로 보는 성격분석에서 더 많은 분석을!'
+                : '🔮 Discover more at AI Face Reading Analysis!';
+            ctx.fillText(urlText, 300, 650);
+            
+            return canvas.toDataURL('image/png');
+        }
+
+        // 텍스트 줄바꿈 함수
+        function wrapText(context, text, x, y, maxWidth, lineHeight) {
+            const words = text.split(' ');
+            let line = '';
+            let lines = [];
+            
+            for (let n = 0; n < words.length; n++) {
+                const testLine = line + words[n] + ' ';
+                const metrics = context.measureText(testLine);
+                const testWidth = metrics.width;
+                
+                if (testWidth > maxWidth && n > 0) {
+                    lines.push(line);
+                    line = words[n] + ' ';
+                } else {
+                    line = testLine;
+                }
+            }
+            lines.push(line);
+            
+            for (let i = 0; i < lines.length; i++) {
+                context.fillText(lines[i], x, y + (i * lineHeight));
+            }
+            
+            return lines;
+        }
+
+        // Canvas RoundRect Polyfill
+        function roundRect(ctx, x, y, w, h, r) {
+            if (w < 2 * r) r = w / 2;
+            if (h < 2 * r) r = h / 2;
+            ctx.beginPath();
+            ctx.moveTo(x + r, y);
+            ctx.arcTo(x + w, y, x + w, y + h, r);
+            ctx.arcTo(x + w, y + h, x, y + h, r);
+            ctx.arcTo(x, y + h, x, y, r);
+            ctx.arcTo(x, y, x + w, y, r);
+            ctx.closePath();
+            return ctx;
+        }
+
+        function shareToKakao() {
+            if (!window.currentFaceResult) {
+                alert(translations[currentLanguage].alerts.completeFirst);
+                return;
+            }
+            
+            const shareText = `🔮 관상으로 보는 성격분석 결과!\n\n${window.currentFaceResult.type} ${window.currentFaceResult.name}\n\n${window.currentFaceResult.description}\n\n🌟 종합 운세: ${window.currentFaceResult.fortuneScore}점\n\n나도 분석해보기: ${window.location.href}`;
+            copyToClipboard(shareText);
+        }
+
+        // 트위터 공유
+        function shareToTwitter() {
+            if (!window.currentFaceResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 관상 분석을 완료해주세요!'
+                    : 'Please complete face reading analysis first!';
+                alert(message);
+                return;
+            }
+
+            const shareText = currentLanguage === 'ko' 
+                ? `🔮 관상으로 보는 성격분석 결과: ${window.currentFaceResult.type} ${window.currentFaceResult.name}! 종합 운세 ${window.currentFaceResult.fortuneScore}점 ✨`
+                : `🔮 AI Face Reading Result: ${window.currentFaceResult.type} ${window.currentFaceResult.name}! Fortune Score: ${window.currentFaceResult.fortuneScore}/100 ✨`;
+            
+            const encodedText = encodeURIComponent(shareText);
+            const shareUrl = encodeURIComponent(window.location.href);
+            const hashtags = currentLanguage === 'ko' 
+                ? encodeURIComponent('관상분석,성격테스트,AI관상,운세,얼굴분석')
+                : encodeURIComponent('FaceReading,PersonalityTest,AIFortune,PhysiognomyTest');
+            
+            const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedText}&url=${shareUrl}&hashtags=${hashtags}`;
+            window.open(twitterUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 페이스북 공유
+        function shareToFacebook() {
+            if (!window.currentFaceResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 관상 분석을 완료해주세요!'
+                    : 'Please complete face reading analysis first!';
+                alert(message);
+                return;
+            }
+
+            const shareUrl = encodeURIComponent(window.location.href);
+            const shareText = currentLanguage === 'ko' 
+                ? `🔮 관상으로 보는 성격분석에서 ${window.currentFaceResult.type} ${window.currentFaceResult.name}이 나왔어요! 종합 운세 ${window.currentFaceResult.fortuneScore}점`
+                : `🔮 I got ${window.currentFaceResult.type} ${window.currentFaceResult.name} from AI Face Reading! Fortune Score: ${window.currentFaceResult.fortuneScore}/100`;
+            
+            const encodedText = encodeURIComponent(shareText);
+            const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}&quote=${encodedText}`;
+            window.open(facebookUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 인스타그램 공유
+        function shareToInstagram() {
+            if (!window.currentFaceResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 관상 분석을 완료해주세요!'
+                    : 'Please complete face reading analysis first!';
+                alert(message);
+                return;
+            }
+            
+            const shareImageData = generateShareImage();
+            if (!shareImageData) return;
+            
+            const link = document.createElement('a');
+            const fileName = currentLanguage === 'ko' 
+                ? `관상분석_${window.currentFaceResult.name.replace(/\s+/g, '_')}.png`
+                : `FaceReading_${window.currentFaceResult.name.replace(/\s+/g, '_')}.png`;
+            link.download = fileName;
+            link.href = shareImageData;
+            
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                link.click();
+                setTimeout(() => {
+                    const instagramUrl = 'instagram://camera';
+                    window.location.href = instagramUrl;
+                    
+                    setTimeout(() => {
+                        window.open('https://www.instagram.com/', '_blank');
+                    }, 2000);
+                }, 3000);
+            } else {
+                link.click();
+                window.open('https://www.instagram.com/', '_blank');
+                const message = currentLanguage === 'ko' 
+                    ? '이미지가 다운로드되었습니다! 인스타그램에서 업로드해보세요 📷'
+                    : 'Image downloaded! Upload it to Instagram 📷';
+                alert(message);
+            }
+        }
+
+        // 일반 공유 (링크 복사)
+        function shareGeneral() {
+            if (!window.currentFaceResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '먼저 관상 분석을 완료해주세요!'
+                    : 'Please complete face reading analysis first!';
+                alert(message);
+                return;
+            }
+
+            const shareText = currentLanguage === 'ko' 
+                ? `🔮 관상으로 보는 성격분석 결과!\n\n${window.currentFaceResult.type} ${window.currentFaceResult.name}\n\n${window.currentFaceResult.description}\n\n🌟 종합 운세: ${window.currentFaceResult.fortuneScore}점\n\n나도 분석해보기: ${window.location.href}`
+                : `🔮 AI Face Reading Result!\n\n${window.currentFaceResult.type} ${window.currentFaceResult.name}\n\n${window.currentFaceResult.description}\n\n🌟 Fortune Score: ${window.currentFaceResult.fortuneScore}/100\n\nTry it yourself: ${window.location.href}`;
+            
+            if (navigator.share) {
+                const title = currentLanguage === 'ko' 
+                    ? '🔮 관상으로 보는 성격분석'
+                    : '🔮 AI Face Reading Personality Test';
+                navigator.share({
+                    title: title,
+                    text: shareText,
+                    url: window.location.href
+                }).catch(error => {
+                    copyToClipboard(shareText);
+                });
+            } else {
+                copyToClipboard(shareText);
+            }
+        }
+
+        // 클립보드에 복사
+        function copyToClipboard(text) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(() => {
+                    const message = currentLanguage === 'ko' 
+                        ? '🔮 관상 분석 결과가 복사되었습니다!\n\n원하는 곳에 붙여넣기해서 공유해보세요! ✨'
+                        : '🔮 Face reading result copied to clipboard!\n\nPaste it anywhere to share! ✨';
+                    alert(message);
+                }).catch(error => {
+                    fallbackCopyToClipboard(text);
+                });
+            } else {
+                fallbackCopyToClipboard(text);
+            }
+        }
+
+        function fallbackCopyToClipboard(text) {
+            try {
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-999999px';
+                textArea.style.top = '-999999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                if (successful) {
+                    const message = currentLanguage === 'ko' 
+                        ? '🔮 관상 분석 결과가 복사되었습니다!\n\n원하는 곳에 붙여넣기해서 공유해보세요! ✨'
+                        : '🔮 Face reading result copied to clipboard!\n\nPaste it anywhere to share! ✨';
+                    alert(message);
+                } else {
+                    const message = currentLanguage === 'ko' 
+                        ? '복사에 실패했습니다. 수동으로 선택해서 복사해주세요.'
+                        : 'Copy failed. Please select and copy manually.';
+                    alert(message);
+                }
+            } catch (error) {
+                const message = currentLanguage === 'ko' 
+                    ? '복사에 실패했습니다. 수동으로 선택해서 복사해주세요.'
+                    : 'Copy failed. Please select and copy manually.';
+                alert(message);
+            }
+        }
+
+        function retakeTest() {
+            document.getElementById('resultSection').style.display = 'none';
+            document.querySelector('.upload-section').style.display = 'block';
+            document.querySelector('.input-section').style.display = 'block';
+            
+            // 입력 필드 초기화
+            document.getElementById('imageUpload').value = '';
+            document.getElementById('previewContainer').style.display = 'none';
+            document.getElementById('genderSelect').value = '';
+            document.getElementById('ageSelect').value = '';
+            document.getElementById('seasonSelect').value = '';
+            document.getElementById('interestSelect').value = '';
+            
+            window.currentImageData = null;
+            window.currentFaceResult = null;
+            window.currentUserInfo = null;
+            
+            checkAnalyzeButton();
+        }
+
+        function saveResult() {
+            if (!window.currentFaceResult) {
+                const message = currentLanguage === 'ko' 
+                    ? '저장할 결과가 없습니다!'
+                    : 'No result to save!';
+                alert(message);
+                return;
+            }
+            
+            const resultData = {
+                faceResult: window.currentFaceResult,
+                userInfo: window.currentUserInfo,
+                timestamp: new Date().toISOString(),
+                url: window.location.href,
+                language: currentLanguage
+            };
+            
+            try {
+                localStorage.setItem('faceReadingResult', JSON.stringify(resultData));
+                const message = currentLanguage === 'ko' 
+                    ? '결과가 저장되었습니다! 💾\n\n언제든 다시 확인할 수 있어요.'
+                    : 'Result saved! 💾\n\nYou can check it anytime.';
+                alert(message);
+            } catch (e) {
+                const message = currentLanguage === 'ko' 
+                    ? '결과 저장에 실패했습니다. 스크린샷으로 저장해보세요! 📷'
+                    : 'Failed to save result. Try saving as screenshot! 📷';
+                alert(message);
+            }
+        }
+
+        function scrollToUpload() {
+            document.querySelector('.upload-section').scrollIntoView({behavior: 'smooth'});
+        }
+
+        // URL에서 언어 파라미터 확인
+        function checkLanguageFromURL() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const langParam = urlParams.get('lang');
+                
+                if (langParam === 'en') {
+                    switchLanguage('en');
+                } else if (langParam === 'ko') {
+                    switchLanguage('ko');
+                } else {
+                    // 브라우저 언어 감지
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    if (browserLang.startsWith('en')) {
+                        switchLanguage('en');
+                    } else {
+                        switchLanguage('ko'); // 기본값
+                    }
+                }
+            } catch (error) {
+                console.log('URL 파라미터 확인을 건너뜁니다:', error.message);
+                // 기본적으로 한국어 설정
+                switchLanguage('ko');
+            }
+        }
+
+        // 페이지 로드 시 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            // URL에서 언어 확인
+            checkLanguageFromURL();
+            
+            // 언어별 텍스트 설정
+            updateTexts(currentLanguage);
+            updateMetaData(currentLanguage);
+        });
+    </script>
+</body>
 </html>
