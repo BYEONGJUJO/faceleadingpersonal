@@ -29,6 +29,9 @@
     <!-- 카카오 SDK -->
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"></script>
 
+    <!-- Kakao AdFit -->
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
     <style>
         * {
             margin: 0; padding: 0; box-sizing: border-box;
@@ -352,6 +355,20 @@
             font-size: 0.95rem;
             line-height: 1.5;
             margin-top: 1rem;
+        }
+
+        .horizontal-ads {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: nowrap; /* ✅ 줄바꿈 방지 */
+            margin: 2rem 0;
+        }
+
+        .horizontal-ad-item {
+            flex: 0 0 250px;
+            height: 250px;
+            background: #f9f9f9;
         }
 
         .upload-section {
@@ -812,6 +829,19 @@
             </div>
         </div>
 
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061187011060033"
+         crossorigin="anonymous"></script>
+        <!-- 관성으로보는 성격 테스트 헤더 -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-4061187011060033"
+             data-ad-slot="3414967919"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
         <!-- AI 분석 원리 설명 -->
         <main class="explanation-section">
             <h2>🤖 AI 관상 분석의 원리</h2>
@@ -888,18 +918,56 @@
             </div>
         </div>
 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061187011060033"
-         crossorigin="anonymous"></script>
-        <!-- 관성으로보는 성격 테스트 헤더 -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4061187011060033"
-             data-ad-slot="3414967919"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
+        <!-- 광고 영역 컨테이너 -->
+        <div class="horizontal-ads">
+            <div class="horizontal-ad-item">
+                <ins class="kakao_ad_area" style="display:none;"
+                    data-ad-unit="DAN-PXylrH28uErhzxrb"
+                    data-ad-width="250"
+                    data-ad-height="250"
+                    data-ad-onfail="callBackFunc"></ins>
+            </div>
+
+            <div class="horizontal-ad-item">
+                <ins class="kakao_ad_area" style="display:none;"
+                    data-ad-unit="DAN-OwajxxKs0yJHwZBb"
+                    data-ad-width="250"
+                    data-ad-height="250"
+                    data-ad-onfail="callBackFunc"></ins>
+            </div>
+
+            <div class="horizontal-ad-item">
+                <ins class="kakao_ad_area" style="display:none;"
+                    data-ad-unit="DAN-mQfR0kGNJao0yjE8"
+                    data-ad-width="250"
+                    data-ad-height="250"
+                    data-ad-onfail="callBackFunc"></ins>
+            </div>
+        </div>
+
+        <!-- 광고 표시 초기화 스크립트 -->
         <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const kakaoAds = document.querySelectorAll('.kakao_ad_area');
+                kakaoAds.forEach((ad, index) => {
+                 ad.style.display = 'block';
+                console.log(`카카오 광고 ${index + 1} 로드 시도`);
+                });
+            }, 2000);
+        });
+
+
+        // 광고 실패 시 대체 콘텐츠
+        function callBackFunc(reason) {
+            const fallback = document.createElement('div');
+            fallback.innerHTML = '<p style="text-align:center; color:#aaa;">광고를 불러올 수 없습니다.</p>';
+            document.querySelectorAll('.kakao_ad_area').forEach(ad => {
+                ad.replaceWith(fallback.cloneNode(true));
+            });
+        }
         </script>
+
         
         <!-- 업로드 섹션 -->
         <div class="upload-section" id="uploadSection">
@@ -1058,7 +1126,8 @@
         <!-- 푸터 -->
         <div class="footer">
             <h3 id="footerTitle">🔮 관상으로 보는 성격분석</h3>
-            <p id="footerSubtitle">전통과 현대가 만나는 신비한 분석! 🌟</p>
+            <p>운영자: 바인글로벌 | 이메일: hhhjbj@naver.com </p>
+            <p>본 서비스는 엔터테인먼트 목적의 무료 테스트입니다.</p>
             <div style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
                 <a href="contact.html" id="contactLink">문의하기</a> | 
                 <a href="privacy.html" id="privacyLink">개인정보처리방침</a> | 
@@ -1089,7 +1158,7 @@
                 mainTitle: '🔮 관상으로 보는 성격분석',
                 mainSubtitle: '전통 관상학과 AI가 만나 당신의 성격, 운세, 특징을  분석해드립니다!',
                 stat1: '📊 누적 분석 789,234명',
-                stat3: '⭐ 만족도 4.8/5',
+                stat3: '⭐ 무료 테스트',
                 uploadTitle: '📸 얼굴 사진을 업로드하세요',
                 uploadDesc: '정면을 바라보는 선명한 얼굴 사진으로 더 정확한 분석이 가능해요!',
                 uploadHint: '🔮 클릭하거나 이미지를 드래그해서 업로드하세요',
