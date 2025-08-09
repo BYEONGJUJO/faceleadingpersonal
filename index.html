@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle">🔮 관상으로 보는 성격분석 | AI 얼굴 관상 테스트</title>
-    <meta name="description" content="전통 관상학과 AI가 만나 당신의 성격, 운세, 특징을 분석해드립니다! 무료 관상 테스트" id="pageDescription">
-    <meta name="keywords" content="관상테스트,얼굴분석,성격테스트,AI관상,무료관상,얼굴관상,운세,성격분석,face reading,personality test,AI physiognomy">
-    
+    <title id="pageTitle">🔮 AI 얼굴 특징 분석 게임 | 재미있는 성격 테스트</title>
+    <meta name="description" content="AI가 얼굴 특징을 분석해 재미있는 성격 유형을 알려주는 엔터테인먼트 게임입니다!">
+    <meta name="keywords" content="AI게임,성격테스트,얼굴분석게임,엔터테인먼트,재미있는테스트,성격유형,AI테스트">
+
     <!-- Open Graph -->
-    <meta property="og:title" content="🔮 관상으로 보는 성격분석 - AI 얼굴 관상 테스트" id="ogTitle">
-    <meta property="og:description" content="전통 관상학과 AI가 만나 당신의 성격과 운세를 분석해드립니다!" id="ogDescription">
+    <meta property="og:title" content="🎭 AI 얼굴 특징 분석 게임 - 재미있는 성격 테스트">
+    <meta property="og:description" content="AI가 얼굴 특징을 분석해 재미있는 성격 유형을 알려드립니다!">
     <meta property="og:image" content="https://your-domain.com/face-reading-og.jpg">
     <meta property="og:url" content="https://your-domain.com">
     
@@ -23,6 +23,7 @@
     gtag('config', 'G-G25HV67JG6');
     </script>
 
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061187011060033"
      crossorigin="anonymous"></script>
 
@@ -155,6 +156,48 @@
             border: 1px solid rgba(255,215,0,0.3);
         }
         
+        /* 엔터테인먼트 면책조항 */
+        .disclaimer-section {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+        }
+
+        .disclaimer-section h3 {
+            color: #856404;
+            margin: 0 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .disclaimer-section p {
+            color: #856404;
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* 광고 컨테이너 스타일 */
+        .ad-container {
+            margin: 1.5rem 0;
+            text-align: center;
+            background: rgba(255,255,255,0.95);
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .ad-label {
+            font-size: 0.8rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         /* AI 분석 원리 설명 섹션 */
         .explanation-section {
             background: rgba(255,255,255,0.95);
@@ -358,6 +401,25 @@
         }
 
         .horizontal-ads {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .horizontal-ad-item {
+            background: rgba(255,255,255,0.95);
+            padding: 1rem;
+            border-radius: 15px;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .horizontal3-ads {
             display: flex;
             justify-content: center;
             gap: 1rem;
@@ -365,7 +427,7 @@
             margin: 2rem 0;
         }
 
-        .horizontal-ad-item {
+        .horizontal3-ad-item {
             flex: 0 0 250px;
             height: 250px;
             background: #f9f9f9;
@@ -820,8 +882,8 @@
     <div class="container">
         <!-- 헤더 -->
         <div class="header">
-            <h1 id="mainTitle">🔮 관상으로 보는 성격분석</h1>
-            <p id="mainSubtitle">전통 관상학과 AI가 만나 당신의 성격, 운세, 분석해드립니다!</p>
+            <h1>🎭 AI 얼굴 특징 분석 게임</h1>
+            <p>AI가 얼굴 특징을 분석해 재미있는 성격 유형을 알려드리는 엔터테인먼트 게임입니다!</p>
             <div class="stats">
                 <span class="stat-item" id="stat1">📊 누적 분석 789,234명</span>
                 <span class="stat-item" id="stat2">🎯 엔터테인먼트</span>
@@ -829,49 +891,81 @@
             </div>
         </div>
 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4061187011060033"
-         crossorigin="anonymous"></script>
-        <!-- 관성으로보는 성격 테스트 헤더 -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4061187011060033"
-             data-ad-slot="3414967919"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <!-- 📍 광고 위치 1: 헤더 하단 -->
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4061187011060033"
+                 data-ad-slot="3414967919"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- 엔터테인먼트 면책조항 -->
+        <div class="disclaimer-section">
+            <h3>⚠️ 엔터테인먼트 알림</h3>
+            <p>
+                본 서비스는 <strong>순수 엔터테인먼트 및 교육 목적</strong>의 재미있는 게임입니다. 
+                실제 과학적, 의학적, 점술적 근거는 없으며, 오락과 흥미만을 위한 서비스입니다.
+                결과는 알고리즘 기반의 임의 생성이며, 실제 성격이나 미래를 예측하지 않습니다.
+            </p>
+        </div>
 
         <!-- AI 분석 원리 설명 -->
         <main class="explanation-section">
-            <h2>🤖 AI 관상 분석의 원리</h2>
+            <h2>🤖 AI 게임 시스템 소개</h2>
             <div class="explanation-content">
-                <p id="analysisIntro">
-                    AI 관상 분석 시스템은 전통 관상학과 최신 인공지능 기술을 결합하여 개발되었습니다. 
-                    관상으로 보는 성격분석은 전통적인 관상학을 바탕으로 한 재미있는 무료 테스트 서비스입니다. 
-                    엔터테인먼트 목적으로 제공되며, 실제 성격을 정확히 예측한다고 보장하지는 않습니다. 재미와 흥미를 위한 서비스로 즐겨주세요.
+                <p>
+                    AI 얼굴 특징 분석 게임은 컴퓨터 비전 기술을 활용한 재미있는 엔터테인먼트 서비스입니다. 
+                    얼굴의 다양한 특징점을 분석하여 흥미로운 성격 유형을 매칭해드리는 <strong>순수 게임</strong>입니다.
+                </p>
+                <p>
+                    <strong>⚠️ 중요:</strong> 본 게임의 결과는 과학적 근거가 없는 오락용 콘텐츠이며, 
+                    실제 성격 분석이나 심리 진단과는 무관합니다. 재미와 흥미를 위한 목적으로만 이용해주세요.
                 </p>
                 <div class="feature-highlights">
                     <div class="highlight-item">
-                        <span class="highlight-icon">🎯</span>
-                        <span id="accuracy">무료 테스트</span>
+                        <span class="highlight-icon">🎮</span>
+                        <span>무료 엔터테인먼트 게임</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">🔬</span>
-                        <span id="scientific">과학적 분석 방법론</span>
+                        <span>컴퓨터 비전 기술 활용</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">🌟</span>
-                        <span id="personalized">개인별 맞춤 해석</span>
+                        <span>개인별 맞춤 재미 결과</span>
                     </div>
                 </div>
             </div>
         </main>
 
+        <!-- 📍 광고 위치 2: 설명 하단 -->
+        <div class="horizontal-ads">
+          <div class="horizontal-ad-item">
+            <ins class="kakao_ad_area" style="display:none;"
+              data-ad-unit="DAN-TBCZi7IUYdO5hu3N"
+              data-ad-width="300"
+              data-ad-height="250"
+              data-ad-onfail="callBackFunc"></ins>
+          </div>
+          <div class="horizontal-ad-item">
+            <ins class="kakao_ad_area" style="display:none;"
+              data-ad-unit="DAN-5H1xC7HjtFuVeyAW"
+              data-ad-width="300"
+              data-ad-height="250"
+              data-ad-onfail="callBackFunc"></ins>
+          </div>
+        </div>
+
         <!-- 샘플 결과 카드들 -->
         <div class="sample-results">
-            <h2 id="sampleTitle">🎭 분석 결과 예시</h2>
-            <p id="sampleSubtitle">실제 분석 결과는 이런 모습이에요!</p>
+            <h2>🎭 게임 결과 예시</h2>
+            <p> 게임 결과는 이런 모습이에요!</p>
             
             <div class="sample-grid">
                 <div class="sample-card">
@@ -919,8 +1013,8 @@
         </div>
 
         <!-- 광고 영역 컨테이너 -->
-        <div class="horizontal-ads">
-            <div class="horizontal-ad-item">
+        <div class="horizontal3-ads">
+            <div class="horizontal3-ad-item">
                 <ins class="kakao_ad_area" style="display:none;"
                     data-ad-unit="DAN-PXylrH28uErhzxrb"
                     data-ad-width="250"
@@ -928,7 +1022,7 @@
                     data-ad-onfail="callBackFunc"></ins>
             </div>
 
-            <div class="horizontal-ad-item">
+            <div class="horizontal3-ad-item">
                 <ins class="kakao_ad_area" style="display:none;"
                     data-ad-unit="DAN-HkV33HLo7EGeLoC4"
                     data-ad-width="250"
@@ -936,7 +1030,7 @@
                     data-ad-onfail="callBackFunc"></ins>
             </div>
 
-            <div class="horizontal-ad-item">
+            <div class="horizontal3-ad-item">
                 <ins class="kakao_ad_area" style="display:none;"
                     data-ad-unit="DAN-mQfR0kGNJao0yjE8"
                     data-ad-width="250"
@@ -1043,7 +1137,7 @@
             </div>
 
             <button onclick="analyzeFace()" class="analyze-button" id="analyzeBtn" disabled>
-                🔮 관상 분석하기
+                🔮 AI 분석하기
             </button>
         </div>
         
@@ -1053,7 +1147,7 @@
             <h3 id="loadingTitle">🔮 AI가 당신의 관상을 분석하는 중...</h3>
             <p id="loadingDesc">전통 관상학과 최신 AI 기술로 정교한 분석을 진행하고 있습니다</p>
         </div>
-        
+
         <!-- 결과 섹션 -->
         <div class="result-section" id="resultSection">
             <h2 id="resultTitle">✨ 관상 분석 결과</h2>
@@ -1103,29 +1197,43 @@
                 <button class="share-button general" onclick="saveResult()" id="saveBtn">💾 결과 저장</button>
             </div>
         </div>
+
+        <!-- 📍 광고 위치 5: 결과 하단 -->
+        <div class="ad-container">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-4061187011060033"
+                 data-ad-slot="1658950965"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div> 
         
         <!-- 연관 테스트 -->
         <div class="related-tests">
-            <h2 id="relatedTitle">🌟 다른 관상 테스트</h2>
+            <h2>🌟 다른 재미있는 AI 게임</h2>
             <div class="test-grid">
                 <a href="#" class="test-card" target="_blank">
-                    <h3 id="relatedTest1">💰 관상으로 보는 재물운</h3>
-                    <p id="relatedDesc1">당신의 금전운과 사업운을 확인해보세요</p>
+                    <h3>💰 AI 성공 지수 게임</h3>
+                    <p>당신의 성공 가능성을 재미있게 확인해보는 게임</p>
                 </a>
                 <a href="#" class="test-card" target="_blank">
-                    <h3 id="relatedTest2">💕 관상으로 보는 연애운</h3>
-                    <p id="relatedDesc2">올해 당신의 연애 운명을 알아보세요</p>
+                    <h3>💕 AI 매력도 측정 게임</h3>
+                    <p>당신의 매력 포인트를 찾아보는 재미있는 게임</p>
                 </a>
                 <a href="#" class="test-card" target="_blank">
-                    <h3 id="relatedTest3">🏆 관상으로 보는 출세운</h3>
-                    <p id="relatedDesc3">당신의 성공 가능성을 확인해보세요</p>
+                    <h3>🏆 AI 재능 발견 게임</h3>
+                    <p>숨겨진 재능을 발견해보는 엔터테인먼트 게임</p>
                 </a>
             </div>
         </div>
 
         <!-- 푸터 -->
         <div class="footer">
-            <h3 id="footerTitle">🔮 관상으로 보는 성격분석</h3>
+            <h3 id="footerTitle">🔮 AI 얼굴 특징 분석 게임</h3>
             <p>운영자: 바인글로벌 | 이메일: hhhjbj@naver.com </p>
             <p>본 서비스는 엔터테인먼트 목적의 무료 테스트입니다.</p>
             <div style="margin-top: 1rem; color: #666; font-size: 0.9rem;">
@@ -1134,7 +1242,7 @@
                 <a href="terms.html" id="termsLink">이용약관</a>
             </div>
             <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;" id="copyright">
-                © 2025 관상으로 보는 성격분석. All rights reserved.
+                © 2025 AI 얼굴 특징 분석 게임. All rights reserved.
             </p>
         </div>
     </div>
@@ -1191,10 +1299,10 @@
                 interestCareer: '학업/진로',
                 interestFamily: '가족/인간관계',
                 interestArt: '예술/취미',
-                analyzeBtn: '🔮 관상 분석하기',
-                loadingTitle: '🔮 AI가 당신의 관상을 분석하는 중...',
-                loadingDesc: '전통 관상학과 최신 AI 기술로 정교한 분석을 진행하고 있습니다',
-                resultTitle: '✨ 관상 분석 결과',
+                analyzeBtn: '🔮 AI 분석하기',
+                loadingTitle: '🔮 AI가 분석하는 중...',
+                loadingDesc: '최신 AI 기술로 정교한 분석을 진행하고 있습니다',
+                resultTitle: '✨ 분석 결과',
                 personalityTitle: '🎭 성격 특징',
                 basicPersonality: '📖 기본 성격:',
                 strengths: '💪 강점:',
@@ -1215,12 +1323,12 @@
                 relatedDesc2: '올해 당신의 연애 운명을 알아보세요',
                 relatedTest3: '🏆 관상으로 보는 출세운',
                 relatedDesc3: '당신의 성공 가능성을 확인해보세요',
-                footerTitle: '🔮 관상으로 보는 성격분석',
+                footerTitle: '🔮 AI 얼굴 특징 분석 게임',
                 footerSubtitle: '전통과 현대가 만나는 신비한 분석! 🌟',
                 contactLink: '문의하기',
                 privacyLink: '개인정보처리방침',
                 termsLink: '이용약관',
-                copyright: '© 2025 관상으로 보는 성격분석. All rights reserved.',
+                copyright: '© 2025 AI 얼굴 특징 분석 게임. All rights reserved.',
                 floatingCta: '🔮 분석하기',
                 analysisTitle: '🤖 AI 관상 분석의 원리',
                 analysisIntro: '우리의 AI 관상 분석 시스템은 전통 관상학과 최신 인공지능 기술을 결합하여 개발되었습니다. 머신러닝 알고리즘이 수천 개의 얼굴 데이터를 학습하여 얼굴의 형태, 눈썹, 눈, 코, 입술 등 각 부위의 특징을 종합적으로 분석합니다.',
